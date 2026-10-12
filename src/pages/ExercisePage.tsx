@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useApp } from '../state/store'
 import { toDateKey } from '../lib/plan'
@@ -37,11 +37,14 @@ export default function ExercisePage() {
   const { plan, selectedDate, records, updateRecord, startTickTimer } = useApp()
   const [playing, setPlaying] = useState(true)
   const [viewOverride, setViewOverride] = useState<'front' | 'side' | null>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [videoPlaying, setVideoPlaying] = useState(true)
 
   const day = plan?.days.find((d) => d.dayIndex === dayIndex)
   const items = day?.sections.flatMap((s) => s.items) ?? []
   const idx = items.findIndex((i) => i.id === exerciseId)
   const item = items[idx]
+  const hasVideo = !!item.video
 
   const dateKey = toDateKey(selectedDate)
   const key = db.makeRecordKey(dateKey, dayIndex, exerciseId ?? '')
@@ -105,36 +108,79 @@ export default function ExercisePage() {
 
   return (
     <div style={{ paddingBottom: 20 }}>
-      {/* 顶部：动画 */}
+      {/* 顶部：动画 / 真人演示视频 */}
       <div className="card anim-card">
         <div className="anim-stage">
           <div className="detail-anim">
-            <ExerciseAnimation exerciseId={item.id} view={view} highlight={item.animation.highlight} playing={playing} />
+            {hasVideo ? (
+              <video
+                ref={videoRef}
+                className="detail-video"
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                onPlay={() => setVideoPlaying(true)}
+                onPause={() => setVideoPlaying(false)}
+              />
+            ) : (
+              <ExerciseAnimation exerciseId={item.id} view={view} highlight={item.animation.highlight} playing={playing} />
+            )}
           </div>
           <button className="done-pill" onClick={() => navigate(-1)}>
             完成
           </button>
           <div className="anim-meta">
-            <span>{view === 'side' ? '侧面示意' : '正面示意'}</span>
-            {partsLabel && <span> · {partsLabel}</span>}
+            {hasVideo ? (
+              <span>真人演示</span>
+            ) : (
+              <>
+                <span>{view === 'side' ? '侧面示意' : '正面示意'}</span>
+                {partsLabel && <span> · {partsLabel}</span>}
+              </>
+            )}
             <span>
               {' '}· {idx + 1}/{items.length}
             </span>
           </div>
         </div>
         <div className="anim-controls">
+          {!hasVideo && (
+            <button
+              onClick={() => setViewOverride(view === 'side' ? 'front' : 'side')}
+              aria-label="切换视角"
+              title="切换视角"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 8h13l-3-3" />
+                <path d="M20 16H7l3 3" />
+              </svg>
+            </button>
+          )}
           <button
-            onClick={() => setViewOverride(view === 'side' ? 'front' : 'side')}
-            aria-label="切换视角"
-            title="切换视角"
+            onClick={() => {
+              if (hasVideo && videoRef.current) {
+                videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
+              } else {
+                setPlaying((p) => !p)
+              }
+            }}
+            aria-label="暂停/播放"
+            title="暂停/播放"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 8h13l-3-3" />
-              <path d="M20 16H7l3 3" />
-            </svg>
-          </button>
-          <button onClick={() => setPlaying((p) => !p)} aria-label="暂停/播放" title="暂停/播放">
-            {playing ? (
+            {hasVideo ? (
+              videoPlaying ? (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                  <rect x="3" y="2" width="3.6" height="12" rx="1.2" />
+                  <rect x="9.4" y="2" width="3.6" height="12" rx="1.2" />
+                </svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M4 2l10 6-10 6z" />
+                </svg>
+              )
+            ) : playing ? (
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                 <rect x="3" y="2" width="3.6" height="12" rx="1.2" />
                 <rect x="9.4" y="2" width="3.6" height="12" rx="1.2" />
@@ -147,9 +193,14 @@ export default function ExercisePage() {
           </button>
           <button
             onClick={() => {
-              setPlaying(false)
-              // 重播：短暂置 true 触发重新开始
-              setTimeout(() => setPlaying(true), 50)
+              if (hasVideo && videoRef.current) {
+                videoRef.current.currentTime = 0
+                videoRef.current.play()
+              } else {
+                setPlaying(false)
+                // 重播：短暂置 true 触发重新开始
+                setTimeout(() => setPlaying(true), 50)
+              }
             }}
             aria-label="重播"
             title="重播"

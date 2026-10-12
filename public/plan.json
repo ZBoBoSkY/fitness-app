@@ -124,7 +124,8 @@
                   "glutes",
                   "quads"
                 ]
-              }
+              },
+              "video": "./videos/chair-sit-to-stand.mp4"
             },
             {
               "id": "kettlebell-romanian-deadlift",

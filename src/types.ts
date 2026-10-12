@@ -58,6 +58,8 @@ export interface ExerciseItem {
     keyframes: string[]
     highlight: string[]
   }
+  /** 真人演示视频（相对 base，如 ./videos/xxx.mp4）；存在时详情页优先播放视频，否则回退 StickFigure */
+  video?: string
 }
 
 // ---- 训练记录（IndexedDB 存储）----

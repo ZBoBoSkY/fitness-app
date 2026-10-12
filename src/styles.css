@@ -543,6 +543,12 @@ body {
   max-width: 260px;
   margin: 0 auto;
 }
+.detail-video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  background: #0E0F11;
+}
 .done-pill {
   position: absolute;
   top: 8px;
