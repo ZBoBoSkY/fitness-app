@@ -4,6 +4,7 @@ import { useApp } from '../state/store'
 import { toDateKey } from '../lib/plan'
 import * as db from '../lib/db'
 import ExerciseAnimation from '../components/ExerciseAnimation'
+import MuscleMap from '../components/MuscleMap'
 
 /** 解剖名 → 中文部位名 */
 const PART_NAMES: Record<string, string> = {
@@ -125,7 +126,7 @@ export default function ExercisePage() {
                 onPause={() => setVideoPlaying(false)}
               />
             ) : (
-              <ExerciseAnimation exerciseId={item.id} view={view} highlight={item.animation.highlight} playing={playing} />
+              <ExerciseAnimation exerciseId={item.id} view={view} highlight={[]} playing={playing} />
             )}
           </div>
           <button className="done-pill" onClick={() => navigate(-1)}>
@@ -211,6 +212,14 @@ export default function ExercisePage() {
             </svg>
           </button>
         </div>
+      </div>
+
+      {/* 目标肌群：解剖肌肉图（前/后视图），替代原 4 桶塌缩高亮 */}
+      <div className="card" style={{ marginTop: 8 }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-2)', marginBottom: 8 }}>
+          目标肌群
+        </div>
+        <MuscleMap highlight={item.animation.highlight} />
       </div>
 
       {/* 醒目的组数次 */}
