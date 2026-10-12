@@ -1,0 +1,3280 @@
+{
+  "plan": {
+    "name": "居家减脂 · 第一阶段",
+    "startDate": "2026-10-12",
+    "weeks": 4,
+    "goal": "降低体脂，慢慢减重",
+    "nutrition": {
+      "kcal": "1800-2000",
+      "proteinG": "100-125",
+      "note": "以温和热量缺口和规律饮食为主，观察连续2至3周的体重均值；蛋白质分配到三餐，优先选择鱼、蛋、瘦肉、奶和豆制品。热量仅为初步估算，根据实际体重变化、饥饿感和活动量调整。"
+    },
+    "progression": [
+      "第1周：熟悉动作，RPE 4-5，每个力量动作2组，保留至少4次余力；膝髋活动范围以无痛或轻微且不加重的不适为限。",
+      "第2周：动作质量稳定且训练后无症状加重时，主要动作增加2次重复或每组增加5秒，不同时增加组数和重量。",
+      "第3周：主要动作增加至3组，辅助动作维持2组；RPE 5-6。仅在动作稳定、无疼痛时增加少量阻力或重复次数。",
+      "第4周：减量恢复，组数比第3周减少约三分之一至一半，重量不增加，RPE 4-5；有氧缩短约20%。"
+    ]
+  },
+  "days": [
+    {
+      "week": 1,
+      "weekday": 1,
+      "dayIndex": 1,
+      "type": "strength",
+      "title": "全身力量 A",
+      "subtitle": "髋主导、推拉与基础核心",
+      "durationMin": [40, 45],
+      "reminder": "动作不追求深度，先建立稳定控制；膝髋疼痛增加时立即缩小幅度或停止。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "自重，RPE 2-3",
+              "restSec": 0,
+              "note": "步幅小，膝盖不必抬高。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "站在稳定地面，双脚与髋同宽。",
+                "drive": "交替抬脚，手臂自然摆动。",
+                "tempo": "轻柔连续，不追求速度。",
+                "mistakes": "避免跺脚、扭髋和高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立，肩部放松", "一脚轻抬，另一脚稳定支撑"],
+                "highlight": ["calves", "core"]
+              }
+            },
+            {
+              "id": "hip-hinge-drill",
+              "name": "徒手髋铰链练习",
+              "sets": 1,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 2",
+              "restSec": 20,
+              "note": "用于学习髋部后移，不追求拉伸幅度。",
+              "alt": "站姿臀部轻触墙面",
+              "cues": {
+                "setup": "双脚与髋同宽，膝盖微屈。",
+                "drive": "臀部向后移，躯干自然前倾。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背、蹲得过深或膝盖锁死。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，双手放在髋部", "臀部后移，背部保持自然曲线"],
+                "highlight": ["glutes", "hamstrings"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 75,
+              "note": "选择稳固凳子，必要时用手辅助；仅在膝盖舒适的幅度进行。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐在凳子前半部，双脚平放。",
+                "drive": "身体略前倾，脚掌推地站起。",
+                "tempo": "站起2秒，坐下3秒。",
+                "mistakes": "避免膝内扣、猛坐或用疼痛换取深度。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐在凳子上，双脚踩稳", "身体前倾站起，膝盖朝脚尖方向"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "5公斤壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4-5",
+              "restSec": 75,
+              "note": "壶铃靠近身体，下放至背部仍稳定的位置。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，双手握壶铃。",
+                "drive": "臀部后移，随后夹臀站直。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背、壶铃远离身体和过度后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "臀部后移，壶铃沿腿下滑"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "6-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "凳子必须靠墙固定，避免滑动。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体从头到脚成直线。",
+                "drive": "屈肘降低胸部，再推回起点。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰、耸肩和肘部完全外张。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["手撑凳边，身体保持直线", "胸部靠近凳边，肘部斜向后"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "先检查弹力带是否破损；只使用安全、可靠的固定方式。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，弹力带固定可靠，双手握带。",
+                "drive": "肘部向后拉，肩胛轻轻靠近。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩、后仰借力和突然松带。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前伸", "肘部向后，肩胛轻轻内收"],
+                "highlight": ["rhomboids", "lats", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧6-8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "保持呼吸自然，腰部舒适即可，不强压腰背。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂朝上，髋膝弯曲。",
+                "drive": "缓慢伸出对侧手臂和腿。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免憋气、腰部明显拱起或动作过快。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧，双臂朝上，膝盖弯曲", "对侧手臂和腿缓慢伸出"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松原地踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 180,
+              "timed": true,
+              "load": "自重，RPE 2-3",
+              "restSec": 0,
+              "note": "作为主动降速，不追求燃脂冲刺。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "站稳，肩膀放松。",
+                "drive": "小幅交替抬脚。",
+                "tempo": "均匀呼吸，逐渐放慢。",
+                "mistakes": "避免跳跃、急停和高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "小幅交替抬脚"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿靠墙拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸，无疼痛",
+              "restSec": 10,
+              "note": "脚跟落地，避免强拉膝髋。",
+              "alt": "坐姿踝关节活动",
+              "cues": {
+                "setup": "双手扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "自然呼吸，保持25秒。",
+                "mistakes": "避免弹震、脚尖外翻或疼痛硬撑。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["双手扶墙站立", "后腿伸展，脚跟落地"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 2,
+      "dayIndex": 2,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "改善心肺与日常活动量",
+      "durationMin": [25, 35],
+      "reminder": "全程可以完整说句子；膝盖或髋部疼痛加重时缩短时间或停止。",
+      "choices": ["平地快走25-35分钟", "舒适骑车25-35分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1800,
+              "timed": true,
+              "load": "RPE 3-4，可完整交谈",
+              "restSec": 0,
+              "note": "先轻松5分钟，再保持舒适强度；膝髋不适时优先选择不诱发疼痛的方式。",
+              "alt": "坐姿交替抬脚10-15分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "以自然步幅或轻阻力连续运动。",
+                "tempo": "前后各5分钟轻松，中段舒适均匀。",
+                "mistakes": "避免冲刺、爬坡和忍痛完成目标。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立，步幅舒适", "脚掌平稳落地，手臂自然摆动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 3,
+      "dayIndex": 3,
+      "type": "recovery",
+      "title": "主动恢复",
+      "subtitle": "轻柔活动与关节舒适度观察",
+      "durationMin": [10, 15],
+      "reminder": "恢复日不追求训练量，结束时应该比开始时更轻松。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "轻柔活动",
+          "items": [
+            {
+              "id": "seated-ankle-pumps",
+              "name": "坐姿踝泵",
+              "sets": 2,
+              "reps": "每侧15",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 15,
+              "note": "轻轻活动踝关节，不追求极限幅度。",
+              "alt": "仰卧踝泵",
+              "cues": {
+                "setup": "坐稳，双脚自然放在地面。",
+                "drive": "脚尖抬起，再轻轻压下。",
+                "tempo": "抬起1秒，放下1秒。",
+                "mistakes": "避免快速甩动或小腿抽痛。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿，脚掌着地", "脚尖抬起，脚跟留地"],
+                "highlight": ["tibialis-anterior", "calves"]
+              }
+            },
+            {
+              "id": "gentle-hip-shift",
+              "name": "扶凳轻柔髋部后移",
+              "sets": 1,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 20,
+              "note": "仅做舒适的小幅髋部活动，不强行翘腿或扭转髋关节。",
+              "alt": "站立自然重心转移",
+              "cues": {
+                "setup": "双手扶稳凳子，双脚平行。",
+                "drive": "臀部轻轻后移再回到站立。",
+                "tempo": "缓慢完成，每次约3秒。",
+                "mistakes": "避免膝内扣、扭腰和强行增加幅度。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶凳自然站立", "臀部轻微后移，背部稳定"],
+                "highlight": ["glutes", "hip-stabilizers"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 4,
+      "dayIndex": 4,
+      "type": "strength",
+      "title": "全身力量 B",
+      "subtitle": "上肢推拉、臀部与稳定性",
+      "durationMin": [35, 45],
+      "reminder": "训练前检查膝髋感受；不做跳跃、弓步、深蹲到底或疼痛范围内的动作。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "小幅度，保持自然呼吸。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "双脚与髋同宽。",
+                "drive": "轻轻交替抬脚。",
+                "tempo": "平稳连续。",
+                "mistakes": "避免跺脚和高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻轻抬起一脚"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "glute-bridge",
+              "name": "臀桥",
+              "sets": 2,
+              "reps": "8-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "如果髋前侧疼痛或夹挤感明显，停止该动作。",
+              "alt": "站姿夹臀",
+              "cues": {
+                "setup": "仰卧屈膝，双脚平放。",
+                "drive": "轻收腹，夹臀抬起骨盆。",
+                "tempo": "抬起2秒，放下3秒。",
+                "mistakes": "避免腰部过度拱起或用力夹痛髋部。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈膝，骨盆落地", "抬起骨盆，肩髋膝大致成线"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "6-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "凳子靠墙固定。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑稳凳边，身体成直线。",
+                "drive": "胸部靠近凳边，再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰、耸肩和肘部外张。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "弹力带固定可靠，不将其绑在不稳固的家具上。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉，肩胛轻收。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩、后仰或突然松手。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dumbbell-floor-press",
+              "name": "哑铃地板卧推",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 4-5",
+              "restSec": 60,
+              "note": "肩部不适时缩小下降幅度。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "仰卧屈膝，双手持哑铃于胸侧。",
+                "drive": "将哑铃平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免肘部过度外张或砸向地面。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧，哑铃位于胸侧", "双臂伸向上方但不锁死肘部"],
+                "highlight": ["chest", "triceps", "anterior-deltoids"]
+              }
+            },
+            {
+              "id": "bird-dog",
+              "name": "鸟狗式",
+              "sets": 2,
+              "reps": "每侧6",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "若跪姿刺激膝盖，可改为站姿扶凳对侧手脚伸展。",
+              "alt": "站姿扶凳对侧伸展",
+              "cues": {
+                "setup": "四点跪姿，手在肩下，膝在髋下。",
+                "drive": "伸出对侧手臂和腿。",
+                "tempo": "伸出2秒，停1秒，返回2秒。",
+                "mistakes": "避免塌腰、骨盆旋转和憋气。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["四点跪姿，背部自然稳定", "对侧手臂和腿向外伸直"],
+                "highlight": ["multifidus", "glutes", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "逐渐降低心率。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "站稳，肩膀放松。",
+                "drive": "小幅交替抬脚。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃和急停。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔交替踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "chest-doorway-stretch",
+              "name": "胸部轻柔拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "肩部不适时缩小幅度。",
+              "alt": "双手交握轻轻向前伸",
+              "cues": {
+                "setup": "站直，一手扶稳门框侧面。",
+                "drive": "身体轻轻转离支撑手。",
+                "tempo": "自然呼吸保持20秒。",
+                "mistakes": "避免扭转腰部或强压肩关节。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["一手轻扶门框", "身体轻微转离支撑手"],
+                "highlight": ["pectoralis-major", "anterior-deltoids"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 5,
+      "dayIndex": 5,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "稳定、轻松、可持续",
+      "durationMin": [20, 30],
+      "reminder": "选择让膝盖和右髋最舒服的方式，不做跳绳、冲刺或爬楼间歇。",
+      "choices": ["平地快走20-30分钟", "轻阻力骑车20-30分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1500,
+              "timed": true,
+              "load": "RPE 3-4",
+              "restSec": 0,
+              "note": "若选择骑车，座椅高度以踩踏到底时膝盖仍略弯为参考。",
+              "alt": "坐姿交替抬脚15分钟",
+              "cues": {
+                "setup": "选平坦路线或稳定自行车。",
+                "drive": "用舒适步幅或轻阻力持续运动。",
+                "tempo": "保持能完整说话的强度。",
+                "mistakes": "避免高阻力骑车、爬坡和忍痛运动。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立，步幅舒适", "稳定连续运动，肩部放松"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 6,
+      "dayIndex": 6,
+      "type": "strength",
+      "title": "全身力量 C",
+      "subtitle": "基础全身训练与姿势控制",
+      "durationMin": [35, 45],
+      "reminder": "每组结束都应感觉还能再做几次；不以疲劳或疼痛作为训练是否有效的标准。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "小幅度活动。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "交替抬脚。",
+                "tempo": "缓慢均匀。",
+                "mistakes": "避免高抬膝和跺脚。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔交替踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 75,
+              "note": "若膝痛，减少起立次数并用手辅助。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4-5",
+              "restSec": 75,
+              "note": "髋部不适时改做无负重小幅髋铰链。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移再夹臀站直。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背、过度下放和后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "dumbbell-overhead-press",
+              "name": "坐姿哑铃推举",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 4",
+              "restSec": 60,
+              "note": "若肩部不适，改为不负重的肩胛控制练习。",
+              "alt": "坐姿徒手肩胛上旋练习",
+              "cues": {
+                "setup": "坐直，哑铃位于肩部两侧。",
+                "drive": "将哑铃平稳推向头顶上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免耸肩、憋气和腰部过度后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，哑铃在肩侧", "双臂向上推至舒适位置"],
+                "highlight": ["deltoids", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "固定点必须可靠。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩、后仰和突然松带。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐姿手臂向前", "肘部向后，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧6-8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "控制优先，不憋气。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免腰部明显拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "逐渐放慢。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔交替抬脚。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免急停或跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "不弹震。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙站立，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持25秒，自然呼吸。",
+                "mistakes": "避免强拉或脚跟离地。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展，脚跟落地"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "weekday": 7,
+      "dayIndex": 7,
+      "type": "rest",
+      "title": "完全休息",
+      "subtitle": "恢复与观察",
+      "durationMin": [0, 10],
+      "reminder": "不需要补做漏掉的训练；记录体重、睡眠和膝髋反应即可。",
+      "choices": [],
+      "sections": []
+    },
+    {
+      "week": 2,
+      "weekday": 1,
+      "dayIndex": 8,
+      "type": "strength",
+      "title": "全身力量 A",
+      "subtitle": "巩固动作，适度增加重复次数",
+      "durationMin": [40, 45],
+      "reminder": "如果第一周训练后膝髋不适持续到第二天，维持原量或减少训练，不要强行进阶。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "逐步升温。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅交替踏步。",
+                "tempo": "连续均匀。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "小幅踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 75,
+              "note": "只在无明显疼痛时增加次数。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4-5",
+              "restSec": 75,
+              "note": "不增加重量。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃靠近身体。",
+                "drive": "臀部后移后夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背和过度后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "动作质量不变。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑稳凳边，身体成直线。",
+                "drive": "胸部靠近凳边，再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰和耸肩。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "12-14",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "仅在阻力可控时增加次数。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "保持正常呼吸。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免腰部明显拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 180,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "平稳呼吸。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅交替抬脚。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "无痛范围内保持。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持25秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 2,
+      "dayIndex": 9,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "稳定提升活动量",
+      "durationMin": [25, 35],
+      "reminder": "如果当天膝髋不适，选择更舒适的方式或缩短时长。",
+      "choices": ["平地快走25-35分钟", "轻阻力骑车25-35分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1800,
+              "timed": true,
+              "load": "RPE 3-4",
+              "restSec": 0,
+              "note": "只增加舒适时长，不增加坡度或阻力。",
+              "alt": "坐姿交替抬脚15-20分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "自然步幅或轻阻力持续运动。",
+                "tempo": "全程可完整交谈。",
+                "mistakes": "避免冲刺和忍痛完成。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立", "稳定连续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 3,
+      "dayIndex": 10,
+      "type": "recovery",
+      "title": "主动恢复",
+      "subtitle": "活动关节，不增加负荷",
+      "durationMin": [10, 15],
+      "reminder": "髋部活动以舒适为界，不强行翘腿或拉开髋关节。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "轻柔活动",
+          "items": [
+            {
+              "id": "seated-ankle-pumps",
+              "name": "坐姿踝泵",
+              "sets": 2,
+              "reps": "每侧15",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 15,
+              "note": "保持舒适节奏。",
+              "alt": "仰卧踝泵",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "抬脚尖，再轻轻压下。",
+                "tempo": "每次约2秒。",
+                "mistakes": "避免快速甩动。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
+                "highlight": ["tibialis-anterior", "calves"]
+              }
+            },
+            {
+              "id": "gentle-hip-shift",
+              "name": "扶凳轻柔髋部后移",
+              "sets": 1,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 20,
+              "note": "不做疼痛方向的髋部旋转。",
+              "alt": "站立自然重心转移",
+              "cues": {
+                "setup": "扶稳凳子，双脚平行。",
+                "drive": "臀部小幅后移再站直。",
+                "tempo": "缓慢完成。",
+                "mistakes": "避免扭腰和膝内扣。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶凳站立", "臀部轻轻后移"],
+                "highlight": ["glutes", "hip-stabilizers"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 4,
+      "dayIndex": 11,
+      "type": "strength",
+      "title": "全身力量 B",
+      "subtitle": "增加重复次数，保持动作质量",
+      "durationMin": [35, 45],
+      "reminder": "不要为了完成次数而缩短动作控制或屏住呼吸。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "小幅度踏步。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "交替抬脚。",
+                "tempo": "平稳连续。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "glute-bridge",
+              "name": "臀桥",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "髋部无不适时才增加次数。",
+              "alt": "站姿夹臀",
+              "cues": {
+                "setup": "仰卧屈膝，双脚平放。",
+                "drive": "夹臀抬起骨盆。",
+                "tempo": "抬起2秒，放下3秒。",
+                "mistakes": "避免腰部过度拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈膝", "骨盆抬起，躯干稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "8-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 60,
+              "note": "保持躯干成直线。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体成直线。",
+                "drive": "胸部靠近凳边再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰和耸肩。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "12-14",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "阻力太大时保持原次数。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dumbbell-floor-press",
+              "name": "哑铃地板卧推",
+              "sets": 2,
+              "reps": "12-14",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 4-5",
+              "restSec": 60,
+              "note": "保持肩部舒适。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "仰卧屈膝，哑铃在胸侧。",
+                "drive": "平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免肘部外张和突然下放。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["哑铃位于胸侧", "双臂向上推起"],
+                "highlight": ["chest", "triceps", "anterior-deltoids"]
+              }
+            },
+            {
+              "id": "bird-dog",
+              "name": "鸟狗式",
+              "sets": 2,
+              "reps": "每侧8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "跪姿刺激膝盖时改用站姿版本。",
+              "alt": "站姿扶凳对侧伸展",
+              "cues": {
+                "setup": "四点跪姿，背部稳定。",
+                "drive": "伸出对侧手臂和腿。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免塌腰和骨盆旋转。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["四点跪姿", "对侧手腿向外伸展"],
+                "highlight": ["multifidus", "glutes", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "缓慢降速。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "chest-doorway-stretch",
+              "name": "胸部轻柔拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "肩部舒适范围内保持。",
+              "alt": "双手交握向前伸",
+              "cues": {
+                "setup": "一手轻扶门框。",
+                "drive": "身体轻轻转离支撑手。",
+                "tempo": "自然呼吸。",
+                "mistakes": "避免强压肩部。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["轻扶门框", "身体轻微转开"],
+                "highlight": ["pectoralis-major", "anterior-deltoids"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 5,
+      "dayIndex": 12,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "舒适强度持续运动",
+      "durationMin": [25, 35],
+      "reminder": "有氧不是越累越有效，持续性和恢复质量更重要。",
+      "choices": ["平地快走25-35分钟", "轻阻力骑车25-35分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1800,
+              "timed": true,
+              "load": "RPE 3-4",
+              "restSec": 0,
+              "note": "不增加速度、坡度和阻力。",
+              "alt": "坐姿交替抬脚15-20分钟",
+              "cues": {
+                "setup": "选平坦路线或稳定自行车。",
+                "drive": "以舒适方式持续运动。",
+                "tempo": "可完整交谈。",
+                "mistakes": "避免冲刺或忍痛。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然站立", "稳定连续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 6,
+      "dayIndex": 13,
+      "type": "strength",
+      "title": "全身力量 C",
+      "subtitle": "稳定完成全身训练",
+      "durationMin": [35, 45],
+      "reminder": "本周优先增加重复次数，不加重、不加速；髋部活动受限不应通过强行拉伸解决。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "轻柔热身。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅踏步。",
+                "tempo": "均匀。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4-5",
+              "restSec": 75,
+              "note": "保持无痛幅度。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4-5",
+              "restSec": 75,
+              "note": "不追求更深的下放。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移再夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背和过度后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "臀部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "dumbbell-overhead-press",
+              "name": "坐姿哑铃推举",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 4-5",
+              "restSec": 60,
+              "note": "肩部不适时停止。",
+              "alt": "坐姿徒手肩胛上旋练习",
+              "cues": {
+                "setup": "坐直，哑铃位于肩侧。",
+                "drive": "平稳推向头顶上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免耸肩和腰部后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐姿哑铃在肩侧", "双臂推向上方"],
+                "highlight": ["deltoids", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "12-14",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4-5",
+              "restSec": 60,
+              "note": "弹力带阻力过大时减少次数。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3-4",
+              "restSec": 45,
+              "note": "控制动作幅度。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免憋气和腰部拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "逐渐放慢。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免急停。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "舒适范围内保持。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持25秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "weekday": 7,
+      "dayIndex": 14,
+      "type": "rest",
+      "title": "完全休息",
+      "subtitle": "让身体适应前两周训练",
+      "durationMin": [0, 10],
+      "reminder": "检查膝髋是否比训练前更痛；持续加重时暂停相关动作并安排专业评估。",
+      "choices": [],
+      "sections": []
+    },
+    {
+      "week": 3,
+      "weekday": 1,
+      "dayIndex": 15,
+      "type": "strength",
+      "title": "全身力量 A",
+      "subtitle": "适度加量，保持低冲击",
+      "durationMin": [40, 45],
+      "reminder": "只有在前两周动作稳定且第二天无症状加重时才增加组数；否则维持第二周训练量。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "先轻柔升温。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅交替踏步。",
+                "tempo": "均匀连续。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 3,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 5-6",
+              "restSec": 90,
+              "note": "若膝部不适，退回2组或缩小幅度。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣、猛坐和疼痛硬撑。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 3,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 5-6",
+              "restSec": 90,
+              "note": "优先保持动作稳定，不急于增加负重。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移，再夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背、过度下放和后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 3,
+              "reps": "6-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 5-6",
+              "restSec": 75,
+              "note": "凳子靠墙固定。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体成直线。",
+                "drive": "胸部靠近凳边，再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰、耸肩和肘部外张。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 3,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 5-6",
+              "restSec": 75,
+              "note": "确保弹力带和固定点安全。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉，肩胛轻收。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩、后仰和突然松带。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 45,
+              "note": "保持正常呼吸。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免腰部明显拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 180,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "平稳降速。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔交替踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "无痛范围内保持。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "自然呼吸保持25秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 2,
+      "dayIndex": 16,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "适度延长舒适运动时间",
+      "durationMin": [30, 35],
+      "reminder": "不做高强度间歇；当前优先建立有氧习惯并控制膝髋症状。",
+      "choices": ["平地快走30-35分钟", "轻阻力骑车30-35分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 2100,
+              "timed": true,
+              "load": "RPE 3-4",
+              "restSec": 0,
+              "note": "若关节不适增加，缩短至20分钟。",
+              "alt": "坐姿交替抬脚15-20分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "自然步幅或轻阻力持续运动。",
+                "tempo": "保持能完整交谈的强度。",
+                "mistakes": "避免冲刺、爬坡和高阻力。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立", "稳定连续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 3,
+      "dayIndex": 17,
+      "type": "recovery",
+      "title": "主动恢复",
+      "subtitle": "轻柔活动与身体反馈",
+      "durationMin": [10, 15],
+      "reminder": "训练后的疲劳可以接受，关节疼痛持续加重不应当作正常训练反应。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "轻柔活动",
+          "items": [
+            {
+              "id": "seated-ankle-pumps",
+              "name": "坐姿踝泵",
+              "sets": 2,
+              "reps": "每侧15",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 15,
+              "note": "轻柔活动。",
+              "alt": "仰卧踝泵",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "抬脚尖，再轻轻压下。",
+                "tempo": "每次约2秒。",
+                "mistakes": "避免快速甩动。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
+                "highlight": ["tibialis-anterior", "calves"]
+              }
+            },
+            {
+              "id": "gentle-hip-shift",
+              "name": "扶凳轻柔髋部后移",
+              "sets": 1,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1-2",
+              "restSec": 20,
+              "note": "不强行增加髋部活动范围。",
+              "alt": "站立自然重心转移",
+              "cues": {
+                "setup": "扶稳凳子，双脚平行。",
+                "drive": "臀部轻微后移再站直。",
+                "tempo": "缓慢完成。",
+                "mistakes": "避免扭腰和膝内扣。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶凳自然站立", "臀部轻轻后移"],
+                "highlight": ["glutes", "hip-stabilizers"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 4,
+      "dayIndex": 18,
+      "type": "strength",
+      "title": "全身力量 B",
+      "subtitle": "上肢与臀部适度加量",
+      "durationMin": [40, 45],
+      "reminder": "如果前两周出现持续膝髋痛，本周不要增加组数，优先接受专业评估。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "小幅踏步。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "交替抬脚。",
+                "tempo": "平稳。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "glute-bridge",
+              "name": "臀桥",
+              "sets": 3,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 5",
+              "restSec": 75,
+              "note": "髋部不适时改为站姿夹臀。",
+              "alt": "站姿夹臀",
+              "cues": {
+                "setup": "仰卧屈膝，双脚平放。",
+                "drive": "夹臀抬起骨盆。",
+                "tempo": "抬起2秒，放下3秒。",
+                "mistakes": "避免腰部过度拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈膝", "骨盆抬起，躯干稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 3,
+              "reps": "6-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 5-6",
+              "restSec": 75,
+              "note": "凳子必须固定。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体成直线。",
+                "drive": "胸部靠近凳边，再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰和耸肩。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 3,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 5-6",
+              "restSec": 75,
+              "note": "不使用有磨损的弹力带。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dumbbell-floor-press",
+              "name": "哑铃地板卧推",
+              "sets": 2,
+              "reps": "12-15",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 5",
+              "restSec": 60,
+              "note": "保持肩部舒适，不追求力竭。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "仰卧屈膝，哑铃在胸侧。",
+                "drive": "平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免肘部外张和突然下放。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["哑铃位于胸侧", "双臂向上推起"],
+                "highlight": ["chest", "triceps", "anterior-deltoids"]
+              }
+            },
+            {
+              "id": "bird-dog",
+              "name": "鸟狗式",
+              "sets": 2,
+              "reps": "每侧8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 45,
+              "note": "跪姿不舒服时改用站姿版本。",
+              "alt": "站姿扶凳对侧伸展",
+              "cues": {
+                "setup": "四点跪姿，背部稳定。",
+                "drive": "伸出对侧手臂和腿。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免塌腰和骨盆旋转。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["四点跪姿", "对侧手腿伸展"],
+                "highlight": ["multifidus", "glutes", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 180,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "缓慢降速。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "chest-doorway-stretch",
+              "name": "胸部轻柔拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "肩部舒适范围内。",
+              "alt": "双手交握向前伸",
+              "cues": {
+                "setup": "一手轻扶门框。",
+                "drive": "身体轻轻转开。",
+                "tempo": "自然呼吸。",
+                "mistakes": "避免强压肩部。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["轻扶门框", "身体轻微转开"],
+                "highlight": ["pectoralis-major", "anterior-deltoids"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 5,
+      "dayIndex": 19,
+      "type": "cardio",
+      "title": "低冲击有氧",
+      "subtitle": "维持稳定心肺刺激",
+      "durationMin": [30, 35],
+      "reminder": "若有氧后关节不适持续至第二天，下一次减少时间或换成更舒适的方式。",
+      "choices": ["平地快走30-35分钟", "轻阻力骑车30-35分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地快走或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 2100,
+              "timed": true,
+              "load": "RPE 3-4",
+              "restSec": 0,
+              "note": "全程舒适，不追求最大心率。",
+              "alt": "坐姿交替抬脚15-20分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "自然步幅或轻阻力运动。",
+                "tempo": "可完整交谈。",
+                "mistakes": "避免冲刺、爬坡和忍痛。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立", "稳定连续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 6,
+      "dayIndex": 20,
+      "type": "strength",
+      "title": "全身力量 C",
+      "subtitle": "巩固全身力量与躯干控制",
+      "durationMin": [40, 45],
+      "reminder": "第3周不是冲刺周；保持至少3次余力，任何动作都不做到力竭。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "小幅度活动。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅踏步。",
+                "tempo": "均匀。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 3,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 5-6",
+              "restSec": 90,
+              "note": "膝部不适时退回2组。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 3,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 5-6",
+              "restSec": 90,
+              "note": "保持舒适髋部活动范围。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移再夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背、过度下放和后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "dumbbell-overhead-press",
+              "name": "坐姿哑铃推举",
+              "sets": 2,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 5",
+              "restSec": 60,
+              "note": "肩部不适时改用徒手版本。",
+              "alt": "坐姿徒手肩胛上旋练习",
+              "cues": {
+                "setup": "坐直，哑铃位于肩侧。",
+                "drive": "平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免耸肩和腰部后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐姿哑铃在肩侧", "双臂向上推起"],
+                "highlight": ["deltoids", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 3,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 5-6",
+              "restSec": 75,
+              "note": "确保弹力带完好且固定牢固。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 2,
+              "reps": "每侧8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 45,
+              "note": "保持呼吸与躯干稳定。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免腰部拱起和憋气。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 180,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "逐渐放慢。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免跳跃。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 25,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "保持舒适。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持25秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "weekday": 7,
+      "dayIndex": 21,
+      "type": "rest",
+      "title": "完全休息",
+      "subtitle": "为减量周做准备",
+      "durationMin": [0, 10],
+      "reminder": "回顾本周动作完成度和膝髋反应，不以单日体重变化评价效果。",
+      "choices": [],
+      "sections": []
+    },
+    {
+      "week": 4,
+      "weekday": 1,
+      "dayIndex": 22,
+      "type": "strength",
+      "title": "全身力量 A",
+      "subtitle": "减量恢复，巩固动作",
+      "durationMin": [30, 40],
+      "reminder": "本周主动减少训练量，让身体恢复；不要因为感觉轻松而临时加量。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "轻柔升温。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅踏步。",
+                "tempo": "均匀连续。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 75,
+              "note": "减少总次数，保持舒适幅度。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4",
+              "restSec": 75,
+              "note": "不增加重量。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移再夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背和过度后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "6-8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 60,
+              "note": "凳子靠墙固定。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体成直线。",
+                "drive": "胸部靠近凳边再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰和耸肩。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4",
+              "restSec": 60,
+              "note": "轻松控制，不追求疲劳。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 1,
+              "reps": "每侧6",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3",
+              "restSec": 45,
+              "note": "轻松完成。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免憋气和腰部拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "放松结束。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免急停。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "自然呼吸。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持20秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 2,
+      "dayIndex": 23,
+      "type": "cardio",
+      "title": "轻松有氧",
+      "subtitle": "减量周维持活动习惯",
+      "durationMin": [20, 30],
+      "reminder": "保持舒适强度即可；如果膝髋状态不佳，可改为短时坐姿活动。",
+      "choices": ["平地舒适步行20-30分钟", "轻阻力骑车20-30分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地步行或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1500,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "不追求速度和距离。",
+              "alt": "坐姿交替抬脚10-15分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "自然步幅或轻阻力。",
+                "tempo": "轻松、可完整交谈。",
+                "mistakes": "避免冲刺和忍痛。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立", "舒适持续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 3,
+      "dayIndex": 24,
+      "type": "recovery",
+      "title": "主动恢复",
+      "subtitle": "轻柔活动，减少疲劳",
+      "durationMin": [10, 15],
+      "reminder": "轻柔活动即可，不需要额外补充训练量。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "轻柔活动",
+          "items": [
+            {
+              "id": "seated-ankle-pumps",
+              "name": "坐姿踝泵",
+              "sets": 1,
+              "reps": "每侧15",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1",
+              "restSec": 15,
+              "note": "轻松活动。",
+              "alt": "仰卧踝泵",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "抬脚尖，再轻轻压下。",
+                "tempo": "缓慢完成。",
+                "mistakes": "避免快速甩动。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
+                "highlight": ["tibialis-anterior", "calves"]
+              }
+            },
+            {
+              "id": "gentle-hip-shift",
+              "name": "扶凳轻柔髋部后移",
+              "sets": 1,
+              "reps": "6-8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 1",
+              "restSec": 20,
+              "note": "髋部舒适范围内活动。",
+              "alt": "站立自然重心转移",
+              "cues": {
+                "setup": "扶稳凳子，双脚平行。",
+                "drive": "臀部轻轻后移。",
+                "tempo": "缓慢返回站立。",
+                "mistakes": "避免扭腰和强拉髋部。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶凳自然站立", "臀部轻微后移"],
+                "highlight": ["glutes", "hip-stabilizers"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 4,
+      "dayIndex": 25,
+      "type": "strength",
+      "title": "全身力量 B",
+      "subtitle": "轻负荷巩固技术",
+      "durationMin": [30, 40],
+      "reminder": "所有动作都应比第3周轻松，不增加阻力，也不追求肌肉酸痛。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "轻柔热身。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "均匀连续。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "glute-bridge",
+              "name": "臀桥",
+              "sets": 2,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 60,
+              "note": "髋部不适时改为站姿夹臀。",
+              "alt": "站姿夹臀",
+              "cues": {
+                "setup": "仰卧屈膝，双脚平放。",
+                "drive": "轻收腹，夹臀抬起。",
+                "tempo": "抬起2秒，放下3秒。",
+                "mistakes": "避免腰部过度拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈膝", "骨盆抬起"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "incline-push-up",
+              "name": "凳上斜板俯卧撑",
+              "sets": 2,
+              "reps": "6-8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 60,
+              "note": "凳子靠墙固定。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "双手撑凳边，身体成直线。",
+                "drive": "胸部靠近凳边，再推回。",
+                "tempo": "下放2秒，推起2秒。",
+                "mistakes": "避免塌腰和耸肩。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["身体成直线", "胸部靠近凳边"],
+                "highlight": ["chest", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4",
+              "restSec": 60,
+              "note": "控制弹力带回程。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和突然松带。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["手臂向前", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dumbbell-floor-press",
+              "name": "哑铃地板卧推",
+              "sets": 1,
+              "reps": "10-12",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 3-4",
+              "restSec": 60,
+              "note": "轻松完成。",
+              "alt": "站姿墙壁俯卧撑",
+              "cues": {
+                "setup": "仰卧屈膝，哑铃在胸侧。",
+                "drive": "平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免肘部外张。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["哑铃在胸侧", "双臂向上推起"],
+                "highlight": ["chest", "triceps", "anterior-deltoids"]
+              }
+            },
+            {
+              "id": "bird-dog",
+              "name": "鸟狗式",
+              "sets": 1,
+              "reps": "每侧6",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3",
+              "restSec": 45,
+              "note": "跪姿不适时使用站姿替代。",
+              "alt": "站姿扶凳对侧伸展",
+              "cues": {
+                "setup": "四点跪姿，背部稳定。",
+                "drive": "伸出对侧手臂和腿。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免塌腰和骨盆旋转。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["四点跪姿", "对侧手腿伸展"],
+                "highlight": ["multifidus", "glutes", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "缓慢降速。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免急停。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "chest-doorway-stretch",
+              "name": "胸部轻柔拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "肩部舒适范围内。",
+              "alt": "双手交握向前伸",
+              "cues": {
+                "setup": "一手轻扶门框。",
+                "drive": "身体轻轻转开。",
+                "tempo": "自然呼吸。",
+                "mistakes": "避免强压肩部。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["轻扶门框", "身体轻微转开"],
+                "highlight": ["pectoralis-major", "anterior-deltoids"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 5,
+      "dayIndex": 26,
+      "type": "cardio",
+      "title": "轻松有氧",
+      "subtitle": "维持活动习惯",
+      "durationMin": [20, 25],
+      "reminder": "保持轻松，不追求距离、速度或额外消耗。",
+      "choices": ["平地舒适步行20-25分钟", "轻阻力骑车20-25分钟"],
+      "sections": [
+        {
+          "name": "有氧",
+          "items": [
+            {
+              "id": "low-impact-cardio",
+              "name": "平地步行或舒适骑车",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 1200,
+              "timed": true,
+              "load": "RPE 2-3",
+              "restSec": 0,
+              "note": "根据关节感受缩短时间。",
+              "alt": "坐姿交替抬脚10-15分钟",
+              "cues": {
+                "setup": "选择平坦路线或稳定自行车。",
+                "drive": "自然步幅或轻阻力。",
+                "tempo": "保持轻松可交谈。",
+                "mistakes": "避免冲刺、爬坡和忍痛。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["自然直立", "舒适持续运动"],
+                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 6,
+      "dayIndex": 27,
+      "type": "strength",
+      "title": "全身力量 C",
+      "subtitle": "轻量巩固，结束第一阶段",
+      "durationMin": [30, 40],
+      "reminder": "以良好动作完成训练；下一阶段应根据膝髋症状、体重趋势和实际训练体验调整。",
+      "choices": [],
+      "sections": [
+        {
+          "name": "热身",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "原地轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "轻柔热身。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "小幅踏步。",
+                "tempo": "均匀。",
+                "mistakes": "避免高抬膝。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "力量",
+          "items": [
+            {
+              "id": "chair-sit-to-stand",
+              "name": "凳子坐站",
+              "sets": 2,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 4",
+              "restSec": 75,
+              "note": "保持无痛幅度。",
+              "alt": "坐姿伸膝小幅练习",
+              "cues": {
+                "setup": "坐稳，双脚平放。",
+                "drive": "脚掌推地站起。",
+                "tempo": "起身2秒，坐下3秒。",
+                "mistakes": "避免膝内扣和猛坐。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
+                "highlight": ["glutes", "quads"]
+              }
+            },
+            {
+              "id": "kettlebell-romanian-deadlift",
+              "name": "壶铃罗马尼亚硬拉",
+              "sets": 2,
+              "reps": "8",
+              "durationSec": null,
+              "timed": false,
+              "load": "5 kg，RPE 4",
+              "restSec": 75,
+              "note": "不增加负重。",
+              "alt": "徒手髋铰链",
+              "cues": {
+                "setup": "双脚与髋同宽，壶铃贴近身体。",
+                "drive": "臀部后移再夹臀站起。",
+                "tempo": "下放3秒，站起2秒。",
+                "mistakes": "避免弓背和过度后仰。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
+                "highlight": ["glutes", "hamstrings", "core"]
+              }
+            },
+            {
+              "id": "dumbbell-overhead-press",
+              "name": "坐姿哑铃推举",
+              "sets": 1,
+              "reps": "8-10",
+              "durationSec": null,
+              "timed": false,
+              "load": "每手2 kg，RPE 3-4",
+              "restSec": 60,
+              "note": "肩部不适时改用徒手练习。",
+              "alt": "坐姿徒手肩胛上旋练习",
+              "cues": {
+                "setup": "坐直，哑铃在肩侧。",
+                "drive": "平稳推向上方。",
+                "tempo": "推起2秒，下降3秒。",
+                "mistakes": "避免耸肩和腰部后仰。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["坐姿哑铃在肩侧", "双臂向上推起"],
+                "highlight": ["deltoids", "triceps", "core"]
+              }
+            },
+            {
+              "id": "band-seated-row",
+              "name": "弹力带坐姿划船",
+              "sets": 2,
+              "reps": "10",
+              "durationSec": null,
+              "timed": false,
+              "load": "轻阻力，RPE 4",
+              "restSec": 60,
+              "note": "回程保持控制。",
+              "alt": "徒手肩胛后缩",
+              "cues": {
+                "setup": "坐直，双手握带。",
+                "drive": "肘部向后拉。",
+                "tempo": "拉2秒，回放3秒。",
+                "mistakes": "避免耸肩和突然松带。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
+                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+              }
+            },
+            {
+              "id": "dead-bug",
+              "name": "死虫式",
+              "sets": 1,
+              "reps": "每侧6",
+              "durationSec": null,
+              "timed": false,
+              "load": "自重，RPE 3",
+              "restSec": 45,
+              "note": "动作轻松可控。",
+              "alt": "仰卧交替抬脚跟",
+              "cues": {
+                "setup": "仰卧，双臂向上，膝盖弯曲。",
+                "drive": "对侧手脚缓慢伸展。",
+                "tempo": "伸出2秒，返回2秒。",
+                "mistakes": "避免憋气和腰部拱起。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
+                "highlight": ["transverse-abdominis", "obliques"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "收尾",
+          "items": [
+            {
+              "id": "easy-march",
+              "name": "轻松踏步",
+              "sets": 1,
+              "reps": null,
+              "durationSec": 120,
+              "timed": true,
+              "load": "RPE 2",
+              "restSec": 0,
+              "note": "逐渐降速。",
+              "alt": "坐姿交替抬脚",
+              "cues": {
+                "setup": "自然站立。",
+                "drive": "轻柔踏步。",
+                "tempo": "逐渐放慢。",
+                "mistakes": "避免急停。"
+              },
+              "animation": {
+                "view": "front",
+                "keyframes": ["自然站立", "轻柔踏步"],
+                "highlight": ["calves", "core"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "拉伸",
+          "items": [
+            {
+              "id": "standing-calf-stretch",
+              "name": "小腿拉伸",
+              "sets": 1,
+              "reps": "每侧1次",
+              "durationSec": 20,
+              "timed": true,
+              "load": "轻拉伸",
+              "restSec": 10,
+              "note": "舒适范围内保持。",
+              "alt": "坐姿踝泵",
+              "cues": {
+                "setup": "扶墙，一脚向后。",
+                "drive": "后脚跟轻压地面。",
+                "tempo": "保持20秒。",
+                "mistakes": "避免弹震。"
+              },
+              "animation": {
+                "view": "side",
+                "keyframes": ["扶墙站立", "后腿伸展"],
+                "highlight": ["gastrocnemius", "soleus"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "weekday": 7,
+      "dayIndex": 28,
+      "type": "rest",
+      "title": "完全休息与阶段复盘",
+      "subtitle": "评估体重、腰围和关节反应",
+      "durationMin": [0, 10],
+      "reminder": "比较四周体重周均值、腰围和训练完成率；不要只看单日体重，也不要用疼痛换取进步。",
+      "choices": [],
+      "sections": []
+    }
+  ]
+}
