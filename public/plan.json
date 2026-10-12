@@ -80,6 +80,7 @@
                 "tempo": "下放3秒，站起2秒。",
                 "mistakes": "避免弓背、蹲得过深或膝盖锁死。"
               },
+              "video": "./videos/hip-hinge-drill.mp4",
               "animation": {
                 "view": "side",
                 "keyframes": [

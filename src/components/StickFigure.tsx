@@ -75,7 +75,7 @@ function Capsule({
   const ang = (Math.atan2(dy, dx) * 180) / Math.PI
   return (
     <g transform={`translate(${x1} ${y1}) rotate(${ang})`} opacity={opacity}>
-      <rect x={-w / 2} y={0} width={w} height={len} rx={w / 2} fill={fill} />
+      <rect x={0} y={-w / 2} width={len} height={w} rx={w / 2} fill={fill} />
     </g>
   )
 }
@@ -189,22 +189,22 @@ export default function StickFigure({ pose, view, highlight = {}, children, clas
     <svg viewBox="0 0 200 200" className={className} style={{ display: 'block' }}>
       <defs>
         {/* 圆柱体积光影：横向 暗-亮-暗 */}
-        <linearGradient id="cyl-skin" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="cyl-skin" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#B97A52" />
           <stop offset="0.5" stopColor="#E9BE96" />
           <stop offset="1" stopColor="#B97A52" />
         </linearGradient>
-        <linearGradient id="cyl-shirt" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="cyl-shirt" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#1F6E7B" />
           <stop offset="0.5" stopColor="#56C3D5" />
           <stop offset="1" stopColor="#1F6E7B" />
         </linearGradient>
-        <linearGradient id="cyl-shorts" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="cyl-shorts" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#222C44" />
           <stop offset="0.5" stopColor="#495C86" />
           <stop offset="1" stopColor="#222C44" />
         </linearGradient>
-        <linearGradient id="cyl-shoe" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="cyl-shoe" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#1C1C22" />
           <stop offset="0.5" stopColor="#3C3C46" />
           <stop offset="1" stopColor="#1C1C22" />

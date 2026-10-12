@@ -99,7 +99,7 @@ function sampleAt(frames,t01){ const n=frames.length; if(n===1) return frames[0]
 
 function Capsule(x1,y1,x2,y2,w,fill,op=1){
   const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy)||1, ang=Math.atan2(dy,dx)*180/Math.PI;
-  return `<g transform="translate(${x1} ${y1}) rotate(${ang})" opacity="${op}"><rect x="${-w/2}" y="0" width="${w}" height="${len}" rx="${w/2}" fill="${fill}"/></g>`;
+  return `<g transform="translate(${x1} ${y1}) rotate(${ang})" opacity="${op}"><rect x="0" y="${-w/2}" width="${len}" height="${w}" rx="${w/2}" fill="${fill}"/></g>`;
 }
 
 function render(pose, view){
@@ -123,10 +123,10 @@ function render(pose, view){
 
   const defs = `
   <defs>
-    <linearGradient id="cyl-skin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B97A52"/><stop offset="0.5" stop-color="#E9BE96"/><stop offset="1" stop-color="#B97A52"/></linearGradient>
-    <linearGradient id="cyl-shirt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F6E7B"/><stop offset="0.5" stop-color="#56C3D5"/><stop offset="1" stop-color="#1F6E7B"/></linearGradient>
-    <linearGradient id="cyl-shorts" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#222C44"/><stop offset="0.5" stop-color="#495C86"/><stop offset="1" stop-color="#222C44"/></linearGradient>
-    <linearGradient id="cyl-shoe" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1C1C22"/><stop offset="0.5" stop-color="#3C3C46"/><stop offset="1" stop-color="#1C1C22"/></linearGradient>
+    <linearGradient id="cyl-skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B97A52"/><stop offset="0.5" stop-color="#E9BE96"/><stop offset="1" stop-color="#B97A52"/></linearGradient>
+    <linearGradient id="cyl-shirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F6E7B"/><stop offset="0.5" stop-color="#56C3D5"/><stop offset="1" stop-color="#1F6E7B"/></linearGradient>
+    <linearGradient id="cyl-shorts" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#222C44"/><stop offset="0.5" stop-color="#495C86"/><stop offset="1" stop-color="#222C44"/></linearGradient>
+    <linearGradient id="cyl-shoe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1C1C22"/><stop offset="0.5" stop-color="#3C3C46"/><stop offset="1" stop-color="#1C1C22"/></linearGradient>
     <linearGradient id="torso-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F6E7B"/><stop offset="0.5" stop-color="#56C3D5"/><stop offset="1" stop-color="#1F6E7B"/></linearGradient>
     <radialGradient id="head-grad" cx="0.38" cy="0.32" r="0.85"><stop offset="0" stop-color="#F1CBA8"/><stop offset="0.7" stop-color="#D9A87E"/><stop offset="1" stop-color="#B97A52"/></radialGradient>
   </defs>`;
