@@ -187,6 +187,9 @@ export const EXERCISE_KEYFRAMES: Record<string, ExerciseKeyframes> = {
   },
 }
 
+// 收尾"轻松踏步"复用热身"原地轻松踏步"的动画
+EXERCISE_KEYFRAMES['easy-march-cool'] = EXERCISE_KEYFRAMES['easy-march']
+
 // 未定义关键帧的动作 id 集合（用于检测 TODO）
 export function hasKeyframes(id: string): boolean {
   return id in EXERCISE_KEYFRAMES

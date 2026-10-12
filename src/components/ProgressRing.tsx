@@ -6,7 +6,7 @@ interface Props {
   size?: number
 }
 
-export default function ProgressRing({ done, total, size = 72 }: Props) {
+export default function ProgressRing({ done, total, size = 84 }: Props) {
   const r = (size - 10) / 2
   const c = 2 * Math.PI * r
   const pct = total > 0 ? done / total : 0
@@ -29,8 +29,9 @@ export default function ProgressRing({ done, total, size = 72 }: Props) {
           style={{ transition: 'stroke-dasharray 0.4s' }}
         />
       </svg>
-      <div className="ring-text">
-        {done}/{total}
+      <div className="ring-text ring-text-v">
+        <div className="ring-done">{done}</div>
+        <div className="ring-total">/{total} 完成</div>
       </div>
     </div>
   )

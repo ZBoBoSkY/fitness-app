@@ -6,6 +6,7 @@ import TodayPage from './pages/TodayPage'
 import ExercisePage from './pages/ExercisePage'
 import HistoryPage from './pages/HistoryPage'
 import TimerBar from './components/TimerBar'
+import MetronomeBar from './components/MetronomeBar'
 
 function ImportPlan() {
   const { importPlan, resetPlan } = useApp()
@@ -61,6 +62,7 @@ function Shell() {
         <Route path="/settings" element={<ImportPlan />} />
       </Routes>
       <TimerBar />
+      <MetronomeBar />
       <nav className="bottomnav">
         <NavLink to="/" end>
           <span className="nav-ico">📋</span>

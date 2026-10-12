@@ -53,6 +53,25 @@ export function playChime() {
   })
 }
 
+/** 到点三声（连续三声提示音） */
+export function playChimeTriple() {
+  const ctx = getCtx()
+  if (!ctx) return
+  for (let i = 0; i < 3; i++) {
+    const t = ctx.currentTime + i * 0.3
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = 'sine'
+    osc.frequency.value = 880
+    gain.gain.setValueAtTime(0.0001, t)
+    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.02)
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.24)
+    osc.connect(gain).connect(ctx.destination)
+    osc.start(t)
+    osc.stop(t + 0.26)
+  }
+}
+
 /** 震动（若支持） */
 export function vibrate(pattern: number | number[]) {
   try {

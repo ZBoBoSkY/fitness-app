@@ -58,6 +58,89 @@ body {
   color: var(--accent);
 }
 
+/* 页头 */
+.page-head {
+  padding: 16px 16px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-2);
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: all 0.15s;
+}
+.icon-btn.on {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+.icon-btn.small {
+  width: 36px;
+  height: 36px;
+}
+
+/* 节拍器状态条 */
+.metronome-bar {
+  position: fixed;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 398px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 24;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.metronome-bar .m-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: tickdot 1s infinite;
+  flex: 0 0 auto;
+}
+@keyframes tickdot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+.metronome-bar .m-text {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.metronome-bar .m-close {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 /* 顶栏 */
 .topbar {
   position: sticky;
@@ -168,30 +251,83 @@ body {
   font-size: 15px;
   font-weight: 700;
 }
+.ring-text-v {
+  flex-direction: column;
+  gap: 1px;
+}
+.ring-text-v .ring-done {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+}
+.ring-text-v .ring-total {
+  font-size: 10px;
+  color: var(--text-3);
+  font-weight: 600;
+}
 
 /* 计划卡片 */
 .plan-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.plan-card::after {
+  content: '';
+  position: absolute;
+  right: -34px;
+  bottom: -46px;
+  width: 180px;
+  height: 180px;
+  background: repeating-linear-gradient(45deg, rgba(255, 107, 44, 0.08) 0 5px, transparent 5px 13px);
+  pointer-events: none;
+}
+.plan-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.plan-top .plan-kicker {
+  color: var(--accent);
+}
+.plan-top .plan-day {
+  color: var(--text-3);
+}
+.plan-body {
   display: flex;
   gap: 14px;
   align-items: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
 }
 .plan-main {
   flex: 1;
   min-width: 0;
 }
 .plan-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
 }
 .plan-subtitle {
   font-size: 13px;
   color: var(--text-2);
-  margin-top: 2px;
+  margin-top: 3px;
 }
-.plan-meta {
+.plan-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--card-2);
   font-size: 12px;
-  color: var(--text-3);
-  margin-top: 6px;
+  color: var(--text-2);
+  margin-top: 10px;
+  width: fit-content;
 }
 .badge {
   display: inline-block;
@@ -201,6 +337,24 @@ body {
   background: var(--accent-dim);
   color: var(--accent);
   margin-top: 6px;
+}
+
+/* 计划要点卡 */
+.summary-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 14px 16px;
+}
+.summary-card .s-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+.summary-card .s-text {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 2px;
+  line-height: 1.5;
 }
 
 .done-msg {
@@ -280,6 +434,17 @@ body {
   flex: 1;
   min-width: 0;
 }
+.exercise-card.has-timer .info {
+  padding-right: 42px;
+}
+.exercise-card .quick-timer {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+.exercise-card {
+  position: relative;
+}
 .exercise-card .name {
   font-size: 15px;
   font-weight: 600;
@@ -321,6 +486,21 @@ body {
   border-color: var(--accent);
   color: #fff;
 }
+.alldone-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
 
 /* 按钮 */
 .btn {
@@ -352,21 +532,46 @@ body {
 }
 
 /* 详情页 */
+.anim-card {
+  padding: 12px;
+}
+.anim-stage {
+  position: relative;
+}
 .detail-anim {
   width: 100%;
   max-width: 260px;
   margin: 0 auto;
 }
-.detail-view-hint {
-  text-align: left;
+.done-pill {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(32, 35, 41, 0.9);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+}
+.anim-meta {
+  position: absolute;
+  left: 8px;
+  bottom: 4px;
+  font-size: 11px;
   color: var(--text-3);
-  font-size: 12px;
+  background: rgba(14, 15, 17, 0.55);
+  padding: 3px 8px;
+  border-radius: 8px;
 }
 .anim-controls {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
-  margin: 10px 0;
+  margin: 12px 0 4px;
 }
 .anim-controls button {
   width: 44px;
@@ -375,8 +580,14 @@ body {
   border: 1px solid var(--border);
   background: var(--card-2);
   color: var(--text);
-  font-size: 18px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anim-controls button:active {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .big-spec {
@@ -423,7 +634,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 .timer-bar .t-num {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--accent);
@@ -431,6 +642,33 @@ body {
 .timer-bar .t-label {
   font-size: 12px;
   color: var(--text-2);
+}
+.timer-bar .t-info {
+  flex: 1;
+  min-width: 0;
+}
+.timer-bar .t-sub {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+.timer-bar .t-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+.timer-bar .t-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .timer-bar .close {
   background: none;

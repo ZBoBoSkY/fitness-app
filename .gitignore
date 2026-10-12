@@ -7,3 +7,6 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 *.tsbuildinfo
+
+# 本地测试截图
+shots/

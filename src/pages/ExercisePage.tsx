@@ -5,19 +5,53 @@ import { toDateKey } from '../lib/plan'
 import * as db from '../lib/db'
 import ExerciseAnimation from '../components/ExerciseAnimation'
 
+/** 解剖名 → 中文部位名 */
+const PART_NAMES: Record<string, string> = {
+  calves: '小腿',
+  core: '核心',
+  glutes: '臀肌',
+  hamstrings: '腘绳肌',
+  quads: '股四头肌',
+  lats: '背阔肌',
+  rhomboids: '菱形肌',
+  'rear-deltoids': '三角肌后束',
+  'transverse-abdominis': '腹横肌',
+  obliques: '腹斜肌',
+  gastrocnemius: '腓肠肌',
+  soleus: '比目鱼肌',
+  'tibialis-anterior': '胫前肌',
+  chest: '胸部',
+  triceps: '肱三头肌',
+  deltoids: '三角肌',
+  'anterior-deltoids': '三角肌前束',
+  'pectoralis-major': '胸大肌',
+  multifidus: '多裂肌',
+  'hip-stabilizers': '髋稳定肌',
+  'cardiorespiratory-system': '心肺',
+}
+
 export default function ExercisePage() {
   const { dayIndex: dayIdxStr, exerciseId } = useParams()
   const dayIndex = Number(dayIdxStr)
   const navigate = useNavigate()
   const { plan, selectedDate, records, updateRecord, startTickTimer } = useApp()
   const [playing, setPlaying] = useState(true)
+  const [viewOverride, setViewOverride] = useState<'front' | 'side' | null>(null)
 
   const day = plan?.days.find((d) => d.dayIndex === dayIndex)
-  const item = day?.sections.flatMap((s) => s.items).find((i) => i.id === exerciseId)
+  const items = day?.sections.flatMap((s) => s.items) ?? []
+  const idx = items.findIndex((i) => i.id === exerciseId)
+  const item = items[idx]
 
   const dateKey = toDateKey(selectedDate)
   const key = db.makeRecordKey(dateKey, dayIndex, exerciseId ?? '')
   const rec = records[key]
+
+  // 切换动作时重置视角与播放状态
+  useEffect(() => {
+    setViewOverride(null)
+    setPlaying(true)
+  }, [exerciseId])
 
   // 进入时请求屏幕常亮
   useEffect(() => {
@@ -44,6 +78,12 @@ export default function ExercisePage() {
     )
   }
 
+  const view = viewOverride ?? item.animation.view
+  const partsLabel = (item.animation.highlight ?? [])
+    .slice(0, 2)
+    .map((p) => PART_NAMES[p] ?? p)
+    .join(' · ')
+
   const isTimed = item.timed
   const specText = isTimed ? `${item.durationSec} 秒` : `${item.sets} 组 × ${item.reps ?? '-'} 次`
 
@@ -66,16 +106,44 @@ export default function ExercisePage() {
   return (
     <div style={{ paddingBottom: 20 }}>
       {/* 顶部：动画 */}
-      <div className="card" style={{ padding: 16 }}>
-        <div className="detail-anim">
-          <ExerciseAnimation exerciseId={item.id} view={item.animation.view} highlight={item.animation.highlight} playing={playing} />
-        </div>
-        <div className="detail-view-hint">
-          {item.animation.view === 'side' ? '侧面视角' : '正面视角'}
+      <div className="card anim-card">
+        <div className="anim-stage">
+          <div className="detail-anim">
+            <ExerciseAnimation exerciseId={item.id} view={view} highlight={item.animation.highlight} playing={playing} />
+          </div>
+          <button className="done-pill" onClick={() => navigate(-1)}>
+            完成
+          </button>
+          <div className="anim-meta">
+            <span>{view === 'side' ? '侧面示意' : '正面示意'}</span>
+            {partsLabel && <span> · {partsLabel}</span>}
+            <span>
+              {' '}· {idx + 1}/{items.length}
+            </span>
+          </div>
         </div>
         <div className="anim-controls">
-          <button onClick={() => setPlaying((p) => !p)} aria-label="暂停/播放">
-            {playing ? '⏸' : '▶'}
+          <button
+            onClick={() => setViewOverride(view === 'side' ? 'front' : 'side')}
+            aria-label="切换视角"
+            title="切换视角"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 8h13l-3-3" />
+              <path d="M20 16H7l3 3" />
+            </svg>
+          </button>
+          <button onClick={() => setPlaying((p) => !p)} aria-label="暂停/播放" title="暂停/播放">
+            {playing ? (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="3" y="2" width="3.6" height="12" rx="1.2" />
+                <rect x="9.4" y="2" width="3.6" height="12" rx="1.2" />
+              </svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M4 2l10 6-10 6z" />
+              </svg>
+            )}
           </button>
           <button
             onClick={() => {
@@ -84,8 +152,12 @@ export default function ExercisePage() {
               setTimeout(() => setPlaying(true), 50)
             }}
             aria-label="重播"
+            title="重播"
           >
-            ↺
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 12a9 9 0 1 0 3-6.7" />
+              <path d="M3 4v5h5" />
+            </svg>
           </button>
         </div>
       </div>
@@ -99,7 +171,7 @@ export default function ExercisePage() {
         {isTimed && item.durationSec != null && (
           <div style={{ marginTop: 12 }}>
             <button className="btn btn-primary btn-block" onClick={() => startTickTimer(item.durationSec!, item.name)}>
-              开始计时（{Math.round(item.durationSec / 60)} 分钟）
+              开始计时（{item.durationSec >= 60 ? `${Math.round(item.durationSec / 60)} 分钟` : `${item.durationSec} 秒`}）
             </button>
           </div>
         )}
@@ -155,13 +227,6 @@ export default function ExercisePage() {
             <textarea rows={2} placeholder="描述疼痛部位与程度" value={rec?.painNote ?? ''} onChange={(e) => savePatch({ painNote: e.target.value })} />
           </div>
         )}
-      </div>
-
-      {/* 完成按钮 */}
-      <div style={{ padding: '0 16px' }}>
-        <button className="btn btn-primary btn-block" onClick={() => navigate(-1)}>
-          完成
-        </button>
       </div>
     </div>
   )

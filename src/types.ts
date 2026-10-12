@@ -85,7 +85,8 @@ export interface BodyMeasure {
 
 // 全局设置
 export interface AppSettings {
-  tickEnabled: boolean // 滴答声开关
+  tickEnabled: boolean // 滴答声开关（计时倒计时中是否滴答）
+  metronomeOn?: boolean // 全局节拍器：每秒一声（独立于计时）
 }
 
 export type ExerciseRecordPatch = Partial<Omit<ExerciseRecord, 'key' | 'date' | 'dayIndex' | 'exerciseId'>>

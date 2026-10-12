@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState, useCallback, useRef, ty
 import type { Plan, ExerciseRecord, BodyMeasure, AppSettings } from '../types'
 import * as db from '../lib/db'
 import { loadPlan, loadCustomPlan, toDateKey, dateForDayIndex, dayIndexForDate } from '../lib/plan'
-import { playChime, playTick, vibrate } from '../lib/audio'
+import { playChime, playChimeTriple, playTick, vibrate } from '../lib/audio'
 
 interface AppState {
   plan: Plan | null
@@ -26,6 +26,8 @@ interface AppState {
   dismissRestTimer: () => void
   dismissTickTimer: () => void
   startTickTimer: (sec: number, label: string) => void
+  timerPaused: boolean
+  toggleTimerPause: () => void
 }
 
 const Ctx = createContext<AppState | null>(null)
@@ -43,11 +45,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>({ tickEnabled: true })
   const [restTimer, setRestTimer] = useState<AppState['restTimer']>(null)
   const [tickTimer, setTickTimer] = useState<AppState['tickTimer']>(null)
+  const [timerPaused, setTimerPaused] = useState(false)
 
   const recordsRef = useRef(records)
   recordsRef.current = records
   const tickRef = useRef<{ enabled: boolean }>({ enabled: true })
   tickRef.current.enabled = settings.tickEnabled
+  const pausedRef = useRef(false)
+  pausedRef.current = timerPaused
+  const timerActiveRef = useRef(false)
+  timerActiveRef.current = !!(restTimer || tickTimer)
 
   // 初始化：加载计划 + 数据
   useEffect(() => {
@@ -104,6 +111,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
       // 打勾后：开始组间休息倒计时（非最后一组且 restSec>0）
       if (!has && restSec > 0 && setNo < setsTotal) {
+        setTimerPaused(false)
         setRestTimer({ remaining: restSec, total: restSec, label: '组间休息' })
       }
       // 打勾后：若为计时类（此处由调用方处理），补一声
@@ -150,18 +158,31 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const dismissRestTimer = useCallback(() => setRestTimer(null), [])
   const dismissTickTimer = useCallback(() => setTickTimer(null), [])
   const startTickTimer = useCallback((sec: number, label: string) => {
+    setTimerPaused(false)
     setTickTimer({ remaining: sec, total: sec, label })
   }, [])
+
+  const toggleTimerPause = useCallback(() => setTimerPaused((p) => !p), [])
+
+  // 全局节拍器：每秒一声（计时条激活时让位，避免双重滴答）
+  useEffect(() => {
+    if (!settings.metronomeOn) return
+    const iv = setInterval(() => {
+      if (!timerActiveRef.current) playTick()
+    }, 1000)
+    return () => clearInterval(iv)
+  }, [settings.metronomeOn])
 
   // 休息倒计时轮询
   useEffect(() => {
     if (!restTimer) return
     const iv = setInterval(() => {
+      if (pausedRef.current) return
       setRestTimer((prev) => {
         if (!prev) return prev
         const next = prev.remaining - 1
         if (next <= 0) {
-          playChime()
+          playChimeTriple()
           vibrate([200, 100, 200])
           return null
         }
@@ -176,12 +197,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!tickTimer) return
     const iv = setInterval(() => {
+      if (pausedRef.current) return
       setTickTimer((prev) => {
         if (!prev) return prev
         if (tickRef.current.enabled) playTick()
         const next = prev.remaining - 1
         if (next <= 0) {
-          playChime()
+          playChimeTriple()
           vibrate([200, 100, 200])
           return null
         }
@@ -210,6 +232,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     dismissRestTimer,
     dismissTickTimer,
     startTickTimer,
+    timerPaused,
+    toggleTimerPause,
   }
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>

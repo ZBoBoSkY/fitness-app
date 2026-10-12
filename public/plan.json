@@ -24,7 +24,10 @@
       "type": "strength",
       "title": "全身力量 A",
       "subtitle": "髋主导、推拉与基础核心",
-      "durationMin": [40, 45],
+      "durationMin": [
+        40,
+        45
+      ],
       "reminder": "动作不追求深度，先建立稳定控制；膝髋疼痛增加时立即缩小幅度或停止。",
       "choices": [],
       "sections": [
@@ -50,8 +53,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立，肩部放松", "一脚轻抬，另一脚稳定支撑"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立，肩部放松",
+                  "一脚轻抬，另一脚稳定支撑"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             },
             {
@@ -73,8 +82,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，双手放在髋部", "臀部后移，背部保持自然曲线"],
-                "highlight": ["glutes", "hamstrings"]
+                "keyframes": [
+                  "站直，双手放在髋部",
+                  "臀部后移，背部保持自然曲线"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings"
+                ]
               }
             }
           ]
@@ -101,8 +116,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐在凳子上，双脚踩稳", "身体前倾站起，膝盖朝脚尖方向"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐在凳子上，双脚踩稳",
+                  "身体前倾站起，膝盖朝脚尖方向"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -124,8 +145,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "臀部后移，壶铃沿腿下滑"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "臀部后移，壶铃沿腿下滑"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -147,8 +175,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["手撑凳边，身体保持直线", "胸部靠近凳边，肘部斜向后"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "手撑凳边，身体保持直线",
+                  "胸部靠近凳边，肘部斜向后"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -170,8 +205,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前伸", "肘部向后，肩胛轻轻内收"],
-                "highlight": ["rhomboids", "lats", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前伸",
+                  "肘部向后，肩胛轻轻内收"
+                ],
+                "highlight": [
+                  "rhomboids",
+                  "lats",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -193,8 +235,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧，双臂朝上，膝盖弯曲", "对侧手臂和腿缓慢伸出"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧，双臂朝上，膝盖弯曲",
+                  "对侧手臂和腿缓慢伸出"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -203,7 +251,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松原地踏步",
               "sets": 1,
               "reps": null,
@@ -221,8 +269,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "小幅交替抬脚"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "小幅交替抬脚"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -249,8 +303,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["双手扶墙站立", "后腿伸展，脚跟落地"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "双手扶墙站立",
+                  "后腿伸展，脚跟落地"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -264,9 +324,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "改善心肺与日常活动量",
-      "durationMin": [25, 35],
+      "durationMin": [
+        25,
+        35
+      ],
       "reminder": "全程可以完整说句子；膝盖或髋部疼痛加重时缩短时间或停止。",
-      "choices": ["平地快走25-35分钟", "舒适骑车25-35分钟"],
+      "choices": [
+        "平地快走25-35分钟",
+        "舒适骑车25-35分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -290,8 +356,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立，步幅舒适", "脚掌平稳落地，手臂自然摆动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立，步幅舒适",
+                  "脚掌平稳落地，手臂自然摆动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -305,7 +378,10 @@
       "type": "recovery",
       "title": "主动恢复",
       "subtitle": "轻柔活动与关节舒适度观察",
-      "durationMin": [10, 15],
+      "durationMin": [
+        10,
+        15
+      ],
       "reminder": "恢复日不追求训练量，结束时应该比开始时更轻松。",
       "choices": [],
       "sections": [
@@ -331,8 +407,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿，脚掌着地", "脚尖抬起，脚跟留地"],
-                "highlight": ["tibialis-anterior", "calves"]
+                "keyframes": [
+                  "坐姿，脚掌着地",
+                  "脚尖抬起，脚跟留地"
+                ],
+                "highlight": [
+                  "tibialis-anterior",
+                  "calves"
+                ]
               }
             },
             {
@@ -354,8 +436,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶凳自然站立", "臀部轻微后移，背部稳定"],
-                "highlight": ["glutes", "hip-stabilizers"]
+                "keyframes": [
+                  "扶凳自然站立",
+                  "臀部轻微后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hip-stabilizers"
+                ]
               }
             }
           ]
@@ -369,7 +457,10 @@
       "type": "strength",
       "title": "全身力量 B",
       "subtitle": "上肢推拉、臀部与稳定性",
-      "durationMin": [35, 45],
+      "durationMin": [
+        35,
+        45
+      ],
       "reminder": "训练前检查膝髋感受；不做跳跃、弓步、深蹲到底或疼痛范围内的动作。",
       "choices": [],
       "sections": [
@@ -395,8 +486,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻轻抬起一脚"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻轻抬起一脚"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -423,8 +520,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈膝，骨盆落地", "抬起骨盆，肩髋膝大致成线"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "仰卧屈膝，骨盆落地",
+                  "抬起骨盆，肩髋膝大致成线"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -446,8 +550,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "手撑凳边，身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -469,8 +580,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -492,8 +610,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧，哑铃位于胸侧", "双臂伸向上方但不锁死肘部"],
-                "highlight": ["chest", "triceps", "anterior-deltoids"]
+                "keyframes": [
+                  "仰卧，哑铃位于胸侧",
+                  "双臂伸向上方但不锁死肘部"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "anterior-deltoids"
+                ]
               }
             },
             {
@@ -515,8 +640,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["四点跪姿，背部自然稳定", "对侧手臂和腿向外伸直"],
-                "highlight": ["multifidus", "glutes", "core"]
+                "keyframes": [
+                  "四点跪姿，背部自然稳定",
+                  "对侧手臂和腿向外伸直"
+                ],
+                "highlight": [
+                  "multifidus",
+                  "glutes",
+                  "core"
+                ]
               }
             }
           ]
@@ -525,7 +657,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -543,8 +675,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔交替踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔交替踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -571,8 +709,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["一手轻扶门框", "身体轻微转离支撑手"],
-                "highlight": ["pectoralis-major", "anterior-deltoids"]
+                "keyframes": [
+                  "一手轻扶门框",
+                  "身体轻微转离支撑手"
+                ],
+                "highlight": [
+                  "pectoralis-major",
+                  "anterior-deltoids"
+                ]
               }
             }
           ]
@@ -586,9 +730,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "稳定、轻松、可持续",
-      "durationMin": [20, 30],
+      "durationMin": [
+        20,
+        30
+      ],
       "reminder": "选择让膝盖和右髋最舒服的方式，不做跳绳、冲刺或爬楼间歇。",
-      "choices": ["平地快走20-30分钟", "轻阻力骑车20-30分钟"],
+      "choices": [
+        "平地快走20-30分钟",
+        "轻阻力骑车20-30分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -612,8 +762,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立，步幅舒适", "稳定连续运动，肩部放松"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立，步幅舒适",
+                  "稳定连续运动，肩部放松"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -627,7 +784,10 @@
       "type": "strength",
       "title": "全身力量 C",
       "subtitle": "基础全身训练与姿势控制",
-      "durationMin": [35, 45],
+      "durationMin": [
+        35,
+        45
+      ],
       "reminder": "每组结束都应感觉还能再做几次；不以疲劳或疼痛作为训练是否有效的标准。",
       "choices": [],
       "sections": [
@@ -653,8 +813,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔交替踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔交替踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -681,8 +847,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿，双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -704,8 +876,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -727,8 +906,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，哑铃在肩侧", "双臂向上推至舒适位置"],
-                "highlight": ["deltoids", "triceps", "core"]
+                "keyframes": [
+                  "坐直，哑铃在肩侧",
+                  "双臂向上推至舒适位置"
+                ],
+                "highlight": [
+                  "deltoids",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -750,8 +936,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐姿手臂向前", "肘部向后，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐姿手臂向前",
+                  "肘部向后，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -773,8 +966,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -783,7 +982,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -801,8 +1000,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -829,8 +1034,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展，脚跟落地"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展，脚跟落地"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -844,7 +1055,10 @@
       "type": "rest",
       "title": "完全休息",
       "subtitle": "恢复与观察",
-      "durationMin": [0, 10],
+      "durationMin": [
+        0,
+        10
+      ],
       "reminder": "不需要补做漏掉的训练；记录体重、睡眠和膝髋反应即可。",
       "choices": [],
       "sections": []
@@ -856,7 +1070,10 @@
       "type": "strength",
       "title": "全身力量 A",
       "subtitle": "巩固动作，适度增加重复次数",
-      "durationMin": [40, 45],
+      "durationMin": [
+        40,
+        45
+      ],
       "reminder": "如果第一周训练后膝髋不适持续到第二天，维持原量或减少训练，不要强行进阶。",
       "choices": [],
       "sections": [
@@ -882,8 +1099,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "小幅踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "小幅踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -910,8 +1133,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿，双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -933,8 +1162,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -956,8 +1192,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "手撑凳边，身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -979,8 +1222,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -1002,8 +1252,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -1012,7 +1268,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -1030,8 +1286,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1058,8 +1320,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -1073,9 +1341,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "稳定提升活动量",
-      "durationMin": [25, 35],
+      "durationMin": [
+        25,
+        35
+      ],
       "reminder": "如果当天膝髋不适，选择更舒适的方式或缩短时长。",
-      "choices": ["平地快走25-35分钟", "轻阻力骑车25-35分钟"],
+      "choices": [
+        "平地快走25-35分钟",
+        "轻阻力骑车25-35分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -1099,8 +1373,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立", "稳定连续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立",
+                  "稳定连续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -1114,7 +1395,10 @@
       "type": "recovery",
       "title": "主动恢复",
       "subtitle": "活动关节，不增加负荷",
-      "durationMin": [10, 15],
+      "durationMin": [
+        10,
+        15
+      ],
       "reminder": "髋部活动以舒适为界，不强行翘腿或拉开髋关节。",
       "choices": [],
       "sections": [
@@ -1140,8 +1424,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
-                "highlight": ["tibialis-anterior", "calves"]
+                "keyframes": [
+                  "坐姿脚掌着地",
+                  "脚尖抬起"
+                ],
+                "highlight": [
+                  "tibialis-anterior",
+                  "calves"
+                ]
               }
             },
             {
@@ -1163,8 +1453,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶凳站立", "臀部轻轻后移"],
-                "highlight": ["glutes", "hip-stabilizers"]
+                "keyframes": [
+                  "扶凳站立",
+                  "臀部轻轻后移"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hip-stabilizers"
+                ]
               }
             }
           ]
@@ -1178,7 +1474,10 @@
       "type": "strength",
       "title": "全身力量 B",
       "subtitle": "增加重复次数，保持动作质量",
-      "durationMin": [35, 45],
+      "durationMin": [
+        35,
+        45
+      ],
       "reminder": "不要为了完成次数而缩短动作控制或屏住呼吸。",
       "choices": [],
       "sections": [
@@ -1204,8 +1503,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1232,8 +1537,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈膝", "骨盆抬起，躯干稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "仰卧屈膝",
+                  "骨盆抬起，躯干稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -1255,8 +1567,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -1278,8 +1597,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -1301,8 +1627,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["哑铃位于胸侧", "双臂向上推起"],
-                "highlight": ["chest", "triceps", "anterior-deltoids"]
+                "keyframes": [
+                  "哑铃位于胸侧",
+                  "双臂向上推起"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "anterior-deltoids"
+                ]
               }
             },
             {
@@ -1324,8 +1657,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["四点跪姿", "对侧手腿向外伸展"],
-                "highlight": ["multifidus", "glutes", "core"]
+                "keyframes": [
+                  "四点跪姿",
+                  "对侧手腿向外伸展"
+                ],
+                "highlight": [
+                  "multifidus",
+                  "glutes",
+                  "core"
+                ]
               }
             }
           ]
@@ -1334,7 +1674,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -1352,8 +1692,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1380,8 +1726,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["轻扶门框", "身体轻微转开"],
-                "highlight": ["pectoralis-major", "anterior-deltoids"]
+                "keyframes": [
+                  "轻扶门框",
+                  "身体轻微转开"
+                ],
+                "highlight": [
+                  "pectoralis-major",
+                  "anterior-deltoids"
+                ]
               }
             }
           ]
@@ -1395,9 +1747,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "舒适强度持续运动",
-      "durationMin": [25, 35],
+      "durationMin": [
+        25,
+        35
+      ],
       "reminder": "有氧不是越累越有效，持续性和恢复质量更重要。",
-      "choices": ["平地快走25-35分钟", "轻阻力骑车25-35分钟"],
+      "choices": [
+        "平地快走25-35分钟",
+        "轻阻力骑车25-35分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -1421,8 +1779,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然站立", "稳定连续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然站立",
+                  "稳定连续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -1436,7 +1801,10 @@
       "type": "strength",
       "title": "全身力量 C",
       "subtitle": "稳定完成全身训练",
-      "durationMin": [35, 45],
+      "durationMin": [
+        35,
+        45
+      ],
       "reminder": "本周优先增加重复次数，不加重、不加速；髋部活动受限不应通过强行拉伸解决。",
       "choices": [],
       "sections": [
@@ -1462,8 +1830,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1490,8 +1864,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -1513,8 +1893,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "臀部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "臀部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -1536,8 +1923,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐姿哑铃在肩侧", "双臂推向上方"],
-                "highlight": ["deltoids", "triceps", "core"]
+                "keyframes": [
+                  "坐姿哑铃在肩侧",
+                  "双臂推向上方"
+                ],
+                "highlight": [
+                  "deltoids",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -1559,8 +1953,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "手臂向前伸",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -1582,8 +1983,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -1592,7 +1999,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -1610,8 +2017,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1638,8 +2051,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -1653,7 +2072,10 @@
       "type": "rest",
       "title": "完全休息",
       "subtitle": "让身体适应前两周训练",
-      "durationMin": [0, 10],
+      "durationMin": [
+        0,
+        10
+      ],
       "reminder": "检查膝髋是否比训练前更痛；持续加重时暂停相关动作并安排专业评估。",
       "choices": [],
       "sections": []
@@ -1665,7 +2087,10 @@
       "type": "strength",
       "title": "全身力量 A",
       "subtitle": "适度加量，保持低冲击",
-      "durationMin": [40, 45],
+      "durationMin": [
+        40,
+        45
+      ],
       "reminder": "只有在前两周动作稳定且第二天无症状加重时才增加组数；否则维持第二周训练量。",
       "choices": [],
       "sections": [
@@ -1691,8 +2116,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1719,8 +2150,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿，双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿，双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -1742,8 +2179,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -1765,8 +2209,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "手撑凳边，身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -1788,8 +2239,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -1811,8 +2269,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -1821,7 +2285,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -1839,8 +2303,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -1867,8 +2337,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -1882,9 +2358,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "适度延长舒适运动时间",
-      "durationMin": [30, 35],
+      "durationMin": [
+        30,
+        35
+      ],
       "reminder": "不做高强度间歇；当前优先建立有氧习惯并控制膝髋症状。",
-      "choices": ["平地快走30-35分钟", "轻阻力骑车30-35分钟"],
+      "choices": [
+        "平地快走30-35分钟",
+        "轻阻力骑车30-35分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -1908,8 +2390,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立", "稳定连续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立",
+                  "稳定连续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -1923,7 +2412,10 @@
       "type": "recovery",
       "title": "主动恢复",
       "subtitle": "轻柔活动与身体反馈",
-      "durationMin": [10, 15],
+      "durationMin": [
+        10,
+        15
+      ],
       "reminder": "训练后的疲劳可以接受，关节疼痛持续加重不应当作正常训练反应。",
       "choices": [],
       "sections": [
@@ -1949,8 +2441,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
-                "highlight": ["tibialis-anterior", "calves"]
+                "keyframes": [
+                  "坐姿脚掌着地",
+                  "脚尖抬起"
+                ],
+                "highlight": [
+                  "tibialis-anterior",
+                  "calves"
+                ]
               }
             },
             {
@@ -1972,8 +2470,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶凳自然站立", "臀部轻轻后移"],
-                "highlight": ["glutes", "hip-stabilizers"]
+                "keyframes": [
+                  "扶凳自然站立",
+                  "臀部轻轻后移"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hip-stabilizers"
+                ]
               }
             }
           ]
@@ -1987,7 +2491,10 @@
       "type": "strength",
       "title": "全身力量 B",
       "subtitle": "上肢与臀部适度加量",
-      "durationMin": [40, 45],
+      "durationMin": [
+        40,
+        45
+      ],
       "reminder": "如果前两周出现持续膝髋痛，本周不要增加组数，优先接受专业评估。",
       "choices": [],
       "sections": [
@@ -2013,8 +2520,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2041,8 +2554,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈膝", "骨盆抬起，躯干稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "仰卧屈膝",
+                  "骨盆抬起，躯干稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -2064,8 +2584,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["手撑凳边，身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "手撑凳边，身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -2087,8 +2614,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -2110,8 +2644,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["哑铃位于胸侧", "双臂向上推起"],
-                "highlight": ["chest", "triceps", "anterior-deltoids"]
+                "keyframes": [
+                  "哑铃位于胸侧",
+                  "双臂向上推起"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "anterior-deltoids"
+                ]
               }
             },
             {
@@ -2133,8 +2674,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["四点跪姿", "对侧手腿伸展"],
-                "highlight": ["multifidus", "glutes", "core"]
+                "keyframes": [
+                  "四点跪姿",
+                  "对侧手腿伸展"
+                ],
+                "highlight": [
+                  "multifidus",
+                  "glutes",
+                  "core"
+                ]
               }
             }
           ]
@@ -2143,7 +2691,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -2161,8 +2709,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2189,8 +2743,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["轻扶门框", "身体轻微转开"],
-                "highlight": ["pectoralis-major", "anterior-deltoids"]
+                "keyframes": [
+                  "轻扶门框",
+                  "身体轻微转开"
+                ],
+                "highlight": [
+                  "pectoralis-major",
+                  "anterior-deltoids"
+                ]
               }
             }
           ]
@@ -2204,9 +2764,15 @@
       "type": "cardio",
       "title": "低冲击有氧",
       "subtitle": "维持稳定心肺刺激",
-      "durationMin": [30, 35],
+      "durationMin": [
+        30,
+        35
+      ],
       "reminder": "若有氧后关节不适持续至第二天，下一次减少时间或换成更舒适的方式。",
-      "choices": ["平地快走30-35分钟", "轻阻力骑车30-35分钟"],
+      "choices": [
+        "平地快走30-35分钟",
+        "轻阻力骑车30-35分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -2230,8 +2796,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立", "稳定连续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立",
+                  "稳定连续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -2245,7 +2818,10 @@
       "type": "strength",
       "title": "全身力量 C",
       "subtitle": "巩固全身力量与躯干控制",
-      "durationMin": [40, 45],
+      "durationMin": [
+        40,
+        45
+      ],
       "reminder": "第3周不是冲刺周；保持至少3次余力，任何动作都不做到力竭。",
       "choices": [],
       "sections": [
@@ -2271,8 +2847,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2299,8 +2881,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -2322,8 +2910,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -2345,8 +2940,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐姿哑铃在肩侧", "双臂向上推起"],
-                "highlight": ["deltoids", "triceps", "core"]
+                "keyframes": [
+                  "坐姿哑铃在肩侧",
+                  "双臂向上推起"
+                ],
+                "highlight": [
+                  "deltoids",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -2368,8 +2970,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "手臂向前伸",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -2391,8 +3000,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -2401,7 +3016,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -2419,8 +3034,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2447,8 +3068,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -2462,7 +3089,10 @@
       "type": "rest",
       "title": "完全休息",
       "subtitle": "为减量周做准备",
-      "durationMin": [0, 10],
+      "durationMin": [
+        0,
+        10
+      ],
       "reminder": "回顾本周动作完成度和膝髋反应，不以单日体重变化评价效果。",
       "choices": [],
       "sections": []
@@ -2474,7 +3104,10 @@
       "type": "strength",
       "title": "全身力量 A",
       "subtitle": "减量恢复，巩固动作",
-      "durationMin": [30, 40],
+      "durationMin": [
+        30,
+        40
+      ],
       "reminder": "本周主动减少训练量，让身体恢复；不要因为感觉轻松而临时加量。",
       "choices": [],
       "sections": [
@@ -2500,8 +3133,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2528,8 +3167,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -2551,8 +3196,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -2574,8 +3226,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -2597,8 +3256,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐直，手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "坐直，手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -2620,8 +3286,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -2630,7 +3302,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -2648,8 +3320,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2676,8 +3354,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -2691,9 +3375,15 @@
       "type": "cardio",
       "title": "轻松有氧",
       "subtitle": "减量周维持活动习惯",
-      "durationMin": [20, 30],
+      "durationMin": [
+        20,
+        30
+      ],
       "reminder": "保持舒适强度即可；如果膝髋状态不佳，可改为短时坐姿活动。",
-      "choices": ["平地舒适步行20-30分钟", "轻阻力骑车20-30分钟"],
+      "choices": [
+        "平地舒适步行20-30分钟",
+        "轻阻力骑车20-30分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -2717,8 +3407,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立", "舒适持续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立",
+                  "舒适持续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -2732,7 +3429,10 @@
       "type": "recovery",
       "title": "主动恢复",
       "subtitle": "轻柔活动，减少疲劳",
-      "durationMin": [10, 15],
+      "durationMin": [
+        10,
+        15
+      ],
       "reminder": "轻柔活动即可，不需要额外补充训练量。",
       "choices": [],
       "sections": [
@@ -2758,8 +3458,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿脚掌着地", "脚尖抬起"],
-                "highlight": ["tibialis-anterior", "calves"]
+                "keyframes": [
+                  "坐姿脚掌着地",
+                  "脚尖抬起"
+                ],
+                "highlight": [
+                  "tibialis-anterior",
+                  "calves"
+                ]
               }
             },
             {
@@ -2781,8 +3487,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶凳自然站立", "臀部轻微后移"],
-                "highlight": ["glutes", "hip-stabilizers"]
+                "keyframes": [
+                  "扶凳自然站立",
+                  "臀部轻微后移"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hip-stabilizers"
+                ]
               }
             }
           ]
@@ -2796,7 +3508,10 @@
       "type": "strength",
       "title": "全身力量 B",
       "subtitle": "轻负荷巩固技术",
-      "durationMin": [30, 40],
+      "durationMin": [
+        30,
+        40
+      ],
       "reminder": "所有动作都应比第3周轻松，不增加阻力，也不追求肌肉酸痛。",
       "choices": [],
       "sections": [
@@ -2822,8 +3537,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2850,8 +3571,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈膝", "骨盆抬起"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "仰卧屈膝",
+                  "骨盆抬起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -2873,8 +3601,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["身体成直线", "胸部靠近凳边"],
-                "highlight": ["chest", "triceps", "core"]
+                "keyframes": [
+                  "身体成直线",
+                  "胸部靠近凳边"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -2896,8 +3631,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["手臂向前", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "手臂向前",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -2919,8 +3661,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["哑铃在胸侧", "双臂向上推起"],
-                "highlight": ["chest", "triceps", "anterior-deltoids"]
+                "keyframes": [
+                  "哑铃在胸侧",
+                  "双臂向上推起"
+                ],
+                "highlight": [
+                  "chest",
+                  "triceps",
+                  "anterior-deltoids"
+                ]
               }
             },
             {
@@ -2942,8 +3691,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["四点跪姿", "对侧手腿伸展"],
-                "highlight": ["multifidus", "glutes", "core"]
+                "keyframes": [
+                  "四点跪姿",
+                  "对侧手腿伸展"
+                ],
+                "highlight": [
+                  "multifidus",
+                  "glutes",
+                  "core"
+                ]
               }
             }
           ]
@@ -2952,7 +3708,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -2970,8 +3726,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -2998,8 +3760,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["轻扶门框", "身体轻微转开"],
-                "highlight": ["pectoralis-major", "anterior-deltoids"]
+                "keyframes": [
+                  "轻扶门框",
+                  "身体轻微转开"
+                ],
+                "highlight": [
+                  "pectoralis-major",
+                  "anterior-deltoids"
+                ]
               }
             }
           ]
@@ -3013,9 +3781,15 @@
       "type": "cardio",
       "title": "轻松有氧",
       "subtitle": "维持活动习惯",
-      "durationMin": [20, 25],
+      "durationMin": [
+        20,
+        25
+      ],
       "reminder": "保持轻松，不追求距离、速度或额外消耗。",
-      "choices": ["平地舒适步行20-25分钟", "轻阻力骑车20-25分钟"],
+      "choices": [
+        "平地舒适步行20-25分钟",
+        "轻阻力骑车20-25分钟"
+      ],
       "sections": [
         {
           "name": "有氧",
@@ -3039,8 +3813,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["自然直立", "舒适持续运动"],
-                "highlight": ["glutes", "calves", "cardiorespiratory-system"]
+                "keyframes": [
+                  "自然直立",
+                  "舒适持续运动"
+                ],
+                "highlight": [
+                  "glutes",
+                  "calves",
+                  "cardiorespiratory-system"
+                ]
               }
             }
           ]
@@ -3054,7 +3835,10 @@
       "type": "strength",
       "title": "全身力量 C",
       "subtitle": "轻量巩固，结束第一阶段",
-      "durationMin": [30, 40],
+      "durationMin": [
+        30,
+        40
+      ],
       "reminder": "以良好动作完成训练；下一阶段应根据膝髋症状、体重趋势和实际训练体验调整。",
       "choices": [],
       "sections": [
@@ -3080,8 +3864,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -3108,8 +3898,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["坐姿双脚踩稳", "身体前倾站起"],
-                "highlight": ["glutes", "quads"]
+                "keyframes": [
+                  "坐姿双脚踩稳",
+                  "身体前倾站起"
+                ],
+                "highlight": [
+                  "glutes",
+                  "quads"
+                ]
               }
             },
             {
@@ -3131,8 +3927,15 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["站直，壶铃贴近大腿", "髋部后移，背部稳定"],
-                "highlight": ["glutes", "hamstrings", "core"]
+                "keyframes": [
+                  "站直，壶铃贴近大腿",
+                  "髋部后移，背部稳定"
+                ],
+                "highlight": [
+                  "glutes",
+                  "hamstrings",
+                  "core"
+                ]
               }
             },
             {
@@ -3154,8 +3957,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["坐姿哑铃在肩侧", "双臂向上推起"],
-                "highlight": ["deltoids", "triceps", "core"]
+                "keyframes": [
+                  "坐姿哑铃在肩侧",
+                  "双臂向上推起"
+                ],
+                "highlight": [
+                  "deltoids",
+                  "triceps",
+                  "core"
+                ]
               }
             },
             {
@@ -3177,8 +3987,15 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["手臂向前伸", "肘部后拉，肩胛轻收"],
-                "highlight": ["lats", "rhomboids", "rear-deltoids"]
+                "keyframes": [
+                  "手臂向前伸",
+                  "肘部后拉，肩胛轻收"
+                ],
+                "highlight": [
+                  "lats",
+                  "rhomboids",
+                  "rear-deltoids"
+                ]
               }
             },
             {
@@ -3200,8 +4017,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["仰卧屈髋屈膝", "对侧手脚缓慢伸展"],
-                "highlight": ["transverse-abdominis", "obliques"]
+                "keyframes": [
+                  "仰卧屈髋屈膝",
+                  "对侧手脚缓慢伸展"
+                ],
+                "highlight": [
+                  "transverse-abdominis",
+                  "obliques"
+                ]
               }
             }
           ]
@@ -3210,7 +4033,7 @@
           "name": "收尾",
           "items": [
             {
-              "id": "easy-march",
+              "id": "easy-march-cool",
               "name": "轻松踏步",
               "sets": 1,
               "reps": null,
@@ -3228,8 +4051,14 @@
               },
               "animation": {
                 "view": "front",
-                "keyframes": ["自然站立", "轻柔踏步"],
-                "highlight": ["calves", "core"]
+                "keyframes": [
+                  "自然站立",
+                  "轻柔踏步"
+                ],
+                "highlight": [
+                  "calves",
+                  "core"
+                ]
               }
             }
           ]
@@ -3256,8 +4085,14 @@
               },
               "animation": {
                 "view": "side",
-                "keyframes": ["扶墙站立", "后腿伸展"],
-                "highlight": ["gastrocnemius", "soleus"]
+                "keyframes": [
+                  "扶墙站立",
+                  "后腿伸展"
+                ],
+                "highlight": [
+                  "gastrocnemius",
+                  "soleus"
+                ]
               }
             }
           ]
@@ -3271,7 +4106,10 @@
       "type": "rest",
       "title": "完全休息与阶段复盘",
       "subtitle": "评估体重、腰围和关节反应",
-      "durationMin": [0, 10],
+      "durationMin": [
+        0,
+        10
+      ],
       "reminder": "比较四周体重周均值、腰围和训练完成率；不要只看单日体重，也不要用疼痛换取进步。",
       "choices": [],
       "sections": []
