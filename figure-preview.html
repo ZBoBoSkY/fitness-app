@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>拟人人体渲染预览 · fitness-app</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #0e0f12; color: #e8e8ea; font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  .sub { color: #9aa0a8; font-size: 13px; margin-bottom: 18px; }
+  .panel { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; background: #16181d; border: 1px solid #23262d; border-radius: 14px; padding: 14px 16px; margin-bottom: 16px; }
+  .panel label { font-size: 13px; color: #b8bdc6; }
+  select, button { background: #20242b; color: #e8e8ea; border: 1px solid #313640; border-radius: 9px; padding: 7px 12px; font-size: 13px; cursor: pointer; }
+  button:hover, select:hover { border-color: #4a90d9; }
+  .stage { background: linear-gradient(180deg, #13151a 0%, #0c0d10 100%); border: 1px solid #23262d; border-radius: 16px; padding: 12px; display: flex; justify-content: center; }
+  svg { width: 320px; height: 320px; max-width: 100%; }
+  .note { color: #7f868f; font-size: 12px; margin-top: 14px; line-height: 1.6; }
+  .tag { display: inline-block; background: #1d2b30; color: #66c8d6; border-radius: 6px; padding: 2px 8px; font-size: 12px; margin-right: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>拟人人体渲染预览</h1>
+  <div class="sub">肤色 + 衣物配色 + 圆柱体积光影（肢体为带横向渐变的胶囊）。这是 B 路线「3D 真人感人物」的静态/动画预览。</div>
+
+  <div class="panel">
+    <label>动作
+      <select id="ex">
+        <option value="chair-sit-to-stand">凳子坐站</option>
+        <option value="hip-hinge-drill">徒手髋铰链</option>
+        <option value="kettlebell-romanian-deadlift">壶铃罗马尼亚硬拉</option>
+        <option value="dumbbell-overhead-press">坐姿哑铃推举（正面）</option>
+        <option value="low-impact-cardio">低冲击有氧（走）</option>
+        <option value="stand">中立站姿</option>
+      </select>
+    </label>
+    <label>视角
+      <select id="view">
+        <option value="side">侧面</option>
+        <option value="front">正面</option>
+      </select>
+    </label>
+    <button id="play">⏸ 暂停</button>
+  </div>
+
+  <div class="stage"><div id="fig"></div></div>
+
+  <div class="note">
+    <span class="tag">说明</span> 该预览与 App 内 StickFigure 组件使用完全相同的渲染逻辑（渐变、胶囊、比例），仅用纯 JS 复刻，便于你在部署前直接判断观感。
+    若满意，App 已内置升级版，直接部署即可；若想微调（肤色 / 衣物颜色 / 头身比），告诉我具体方向。
+  </div>
+</div>
+
+<script>
+const SEG = { headR: 10, neckLen: 7, torsoLen: 42, upperArm: 23, forearm: 21, thigh: 33, shin: 33 };
+const HL = '#FF6B2C';
+
+function polar(cx, cy, len, angDeg){ const r = angDeg*Math.PI/180; return [cx+len*Math.cos(r), cy+len*Math.sin(r)]; }
+
+// 关键帧（节选自 plan 动作定义）
+const stand = { hip:0, kneeL:5, kneeR:5, shoulderL:0, shoulderR:0, elbowL:0, elbowR:0, hipFlexL:0, hipFlexR:0, torsoLean:0, footLift:0, armSwing:0 };
+const p = o => ({ ...stand, ...o });
+const KF = {
+  'stand': { view:'side', frames:[p({})] },
+  'chair-sit-to-stand': { view:'side', frames:[
+    p({ torsoLean:0, kneeL:95, kneeR:95, hipFlexL:80, hipFlexR:80, shoulderL:25, shoulderR:25 }),
+    p({ torsoLean:30, kneeL:60, kneeR:60, hipFlexL:55, hipFlexR:55, shoulderL:10, shoulderR:10 }),
+    p({ torsoLean:0, kneeL:5, kneeR:5, hipFlexL:0, hipFlexR:0 }),
+    p({ torsoLean:0, kneeL:95, kneeR:95, hipFlexL:80, hipFlexR:80, shoulderL:25, shoulderR:25 }),
+  ], prop:'chair' },
+  'hip-hinge-drill': { view:'side', frames:[
+    p({ torsoLean:0, hipFlexL:0, hipFlexR:0, kneeL:5, kneeR:5 }),
+    p({ torsoLean:55, hipFlexL:15, hipFlexR:15, kneeL:25, kneeR:25, shoulderL:-20, shoulderR:-20 }),
+    p({ torsoLean:0, hipFlexL:0, hipFlexR:0, kneeL:5, kneeR:5 }),
+  ] },
+  'kettlebell-romanian-deadlift': { view:'side', frames:[
+    p({ torsoLean:0, kneeL:5, kneeR:5, shoulderL:15, shoulderR:15, elbowL:10, elbowR:10 }),
+    p({ torsoLean:60, kneeL:20, kneeR:20, hipFlexL:10, hipFlexR:10, shoulderL:-10, shoulderR:-10, elbowL:10, elbowR:10 }),
+    p({ torsoLean:0, kneeL:5, kneeR:5, shoulderL:15, shoulderR:15, elbowL:10, elbowR:10 }),
+  ], prop:'kettlebell' },
+  'dumbbell-overhead-press': { view:'front', frames:[
+    p({ kneeL:90, kneeR:90, hipFlexL:80, hipFlexR:80, shoulderL:60, shoulderR:60, elbowL:90, elbowR:90 }),
+    p({ kneeL:90, kneeR:90, hipFlexL:80, hipFlexR:80, shoulderL:110, shoulderR:110, elbowL:5, elbowR:5 }),
+    p({ kneeL:90, kneeR:90, hipFlexL:80, hipFlexR:80, shoulderL:60, shoulderR:60, elbowL:90, elbowR:90 }),
+  ], prop:'dumbbell' },
+  'low-impact-cardio': { view:'side', frames:[
+    p({ kneeL:10, kneeR:25, hipFlexL:5, hipFlexR:20, elbowL:30, elbowR:40, footLift:0 }),
+    p({ kneeL:40, kneeR:10, hipFlexL:25, hipFlexR:5, elbowL:50, elbowR:20, footLift:0.6 }),
+    p({ kneeL:10, kneeR:25, hipFlexL:5, hipFlexR:20, elbowL:30, elbowR:40, footLift:0 }),
+    p({ kneeR:40, kneeL:10, hipFlexR:25, hipFlexL:5, elbowR:50, elbowL:20, footLift:0.6 }),
+  ] },
+};
+
+function lerp(a,b,t){ return a+(b-a)*t; }
+function lerpPose(a,b,t){ const o={...a}; for(const k in a) o[k]=lerp(a[k],b[k],t); return o; }
+function sampleAt(frames,t01){ const n=frames.length; if(n===1) return frames[0]; const seg=t01*n; const i=Math.floor(seg)%n; const j=(i+1)%n; return lerpPose(frames[i],frames[j],seg-Math.floor(seg)); }
+
+function Capsule(x1,y1,x2,y2,w,fill,op=1){
+  const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy)||1, ang=Math.atan2(dy,dx)*180/Math.PI;
+  return `<g transform="translate(${x1} ${y1}) rotate(${ang})" opacity="${op}"><rect x="${-w/2}" y="0" width="${w}" height="${len}" rx="${w/2}" fill="${fill}"/></g>`;
+}
+
+function render(pose, view){
+  const isSide = view==='side';
+  const hipX=100, hipY = isSide?108:103;
+  const headY = hipY - SEG.torsoLen - SEG.neckLen - SEG.headR;
+  const torsoAngle = isSide? pose.torsoLean : 0;
+  const neckBase=[hipX, hipY-SEG.torsoLen];
+  const headCenter=[hipX + (isSide? Math.sin(torsoAngle*Math.PI/180)*(SEG.neckLen+SEG.headR):0), headY];
+  const shoulderX=neckBase[0], shoulderY=neckBase[1];
+  function makeArm(sa,ea){ const dir=-90+sa; const e=polar(shoulderX,shoulderY,SEG.upperArm,dir); const h=polar(e[0],e[1],SEG.forearm,dir+ea-90); return {elbow:e,hand:h}; }
+  const armL=makeArm(pose.shoulderL,pose.elbowL), armR=makeArm(pose.shoulderR,pose.elbowR);
+  function makeLeg(hf,k,lift){ let ta = isSide? 90+hf : 90; const lo=lift*8; const ta2 = ta + (isSide?0:lo*0.3); const kp=polar(hipX,hipY,SEG.thigh,ta2); const sa=ta2-k; const an=polar(kp[0],kp[1],SEG.shin,sa); return {knee:kp,ankle:an}; }
+  const legL=makeLeg(pose.hipFlexL,pose.kneeL,pose.footLift), legR=makeLeg(pose.hipFlexR,pose.kneeR,-pose.footLift);
+  const farOp = isSide?0.82:1;
+  const tdx=neckBase[0]-hipX, tdy=neckBase[1]-hipY, tl=Math.hypot(tdx,tdy)||1;
+  const px=-tdy/tl, py=tdx/tl;
+  const shW=12, waW=8.5, hpW=11;
+  const midX=(neckBase[0]+hipX)/2, midY=(neckBase[1]+hipY)/2;
+  const torsoPoly=[[neckBase[0]+px*shW,neckBase[1]+py*shW],[neckBase[0]-px*shW,neckBase[1]-py*shW],[midX-px*waW,midY-py*waW],[hipX-px*hpW,hipY-py*hpW],[hipX+px*hpW,hipY+py*hpW],[midX+px*waW,midY+py*waW]].map(q=>q.join(',')).join(' ');
+
+  const defs = `
+  <defs>
+    <linearGradient id="cyl-skin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B97A52"/><stop offset="0.5" stop-color="#E9BE96"/><stop offset="1" stop-color="#B97A52"/></linearGradient>
+    <linearGradient id="cyl-shirt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F6E7B"/><stop offset="0.5" stop-color="#56C3D5"/><stop offset="1" stop-color="#1F6E7B"/></linearGradient>
+    <linearGradient id="cyl-shorts" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#222C44"/><stop offset="0.5" stop-color="#495C86"/><stop offset="1" stop-color="#222C44"/></linearGradient>
+    <linearGradient id="cyl-shoe" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1C1C22"/><stop offset="0.5" stop-color="#3C3C46"/><stop offset="1" stop-color="#1C1C22"/></linearGradient>
+    <linearGradient id="torso-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F6E7B"/><stop offset="0.5" stop-color="#56C3D5"/><stop offset="1" stop-color="#1F6E7B"/></linearGradient>
+    <radialGradient id="head-grad" cx="0.38" cy="0.32" r="0.85"><stop offset="0" stop-color="#F1CBA8"/><stop offset="0.7" stop-color="#D9A87E"/><stop offset="1" stop-color="#B97A52"/></radialGradient>
+  </defs>`;
+
+  let propSvg = '';
+  const kf = KF[currentEx()] || {};
+  if(kf.prop==='chair'){ propSvg = `<g><rect x="118" y="128" width="34" height="8" rx="2" fill="#3A3D44"/><line x1="120" y1="136" x2="120" y2="175" stroke="#3A3D44" stroke-width="4"/><line x1="150" y1="136" x2="150" y2="175" stroke="#3A3D44" stroke-width="4"/></g>`; }
+  if(kf.prop==='kettlebell'){ propSvg = `<g><line x1="100" y1="118" x2="100" y2="138" stroke="${HL}" stroke-width="4"/><circle cx="100" cy="145" r="11" fill="none" stroke="${HL}" stroke-width="4"/><rect x="95" y="136" width="10" height="6" rx="2" fill="${HL}"/></g>`; }
+  if(kf.prop==='dumbbell'){ const y=48; propSvg = `<g><line x1="82" y1="${y}" x2="118" y2="${y}" stroke="${HL}" stroke-width="4"/><rect x="74" y="${y-10}" width="8" height="20" rx="2" fill="${HL}"/><rect x="118" y="${y-10}" width="8" height="20" rx="2" fill="${HL}"/></g>`; }
+
+  return `<svg viewBox="0 0 200 200" style="display:block">
+    ${defs}
+    <ellipse cx="100" cy="180" rx="74" ry="9" fill="#15161A" stroke="#26282E" stroke-width="1"/>
+    <ellipse cx="${hipX+2}" cy="180" rx="30" ry="4.5" fill="rgba(0,0,0,0.5)"/>
+    ${propSvg}
+    <g opacity="${farOp}">
+      ${Capsule(shoulderX,shoulderY,armR.elbow[0],armR.elbow[1],6.5,'url(#cyl-shirt)')}
+      ${Capsule(armR.elbow[0],armR.elbow[1],armR.hand[0],armR.hand[1],5.2,'url(#cyl-skin)')}
+      ${Capsule(hipX,hipY,legR.knee[0],legR.knee[1],8,'url(#cyl-shorts)')}
+      ${Capsule(legR.knee[0],legR.knee[1],legR.ankle[0],legR.ankle[1],6,'url(#cyl-skin)')}
+      ${Capsule(legR.ankle[0],legR.ankle[1],legR.ankle[0]+(isSide?11:6),legR.ankle[1]+(isSide?0:7),5,'url(#cyl-shoe)')}
+    </g>
+    <polygon points="${torsoPoly}" fill="url(#torso-grad)"/>
+    ${Capsule(neckBase[0],neckBase[1],headCenter[0],headCenter[1]+SEG.headR-1,6,'url(#cyl-skin)')}
+    ${Capsule(shoulderX,shoulderY,armL.elbow[0],armL.elbow[1],6.5,'url(#cyl-shirt)')}
+    ${Capsule(armL.elbow[0],armL.elbow[1],armL.hand[0],armL.hand[1],5.2,'url(#cyl-skin)')}
+    ${Capsule(hipX,hipY,legL.knee[0],legL.knee[1],8,'url(#cyl-shorts)')}
+    ${Capsule(legL.knee[0],legL.knee[1],legL.ankle[0],legL.ankle[1],6,'url(#cyl-skin)')}
+    ${Capsule(legL.ankle[0],legL.ankle[1],legL.ankle[0]+(isSide?11:6),legL.ankle[1]+(isSide?0:7),5,'url(#cyl-shoe)')}
+    <circle cx="${shoulderX}" cy="${shoulderY}" r="4.4" fill="url(#cyl-shirt)"/>
+    <circle cx="${armL.elbow[0]}" cy="${armL.elbow[1]}" r="3.8" fill="url(#cyl-skin)"/>
+    <circle cx="${armR.elbow[0]}" cy="${armR.elbow[1]}" r="3.8" fill="url(#cyl-skin)" opacity="${farOp}"/>
+    <circle cx="${hipX}" cy="${hipY}" r="5" fill="url(#cyl-shorts)"/>
+    <circle cx="${legL.knee[0]}" cy="${legL.knee[1]}" r="4" fill="url(#cyl-skin)"/>
+    <circle cx="${legR.knee[0]}" cy="${legR.knee[1]}" r="4" fill="url(#cyl-skin)" opacity="${farOp}"/>
+    <circle cx="${armL.hand[0]}" cy="${armL.hand[1]}" r="3.4" fill="url(#cyl-skin)"/>
+    <circle cx="${armR.hand[0]}" cy="${armR.hand[1]}" r="3.4" fill="url(#cyl-skin)" opacity="${farOp}"/>
+    <g>
+      <circle cx="${headCenter[0]}" cy="${headCenter[1]}" r="${SEG.headR}" fill="url(#head-grad)"/>
+      <path d="M ${headCenter[0]-SEG.headR} ${headCenter[1]} A ${SEG.headR} ${SEG.headR} 0 0 1 ${headCenter[0]+SEG.headR} ${headCenter[1]}" fill="none" stroke="#2B2620" stroke-width="3.4" stroke-linecap="round"/>
+      ${isSide?`<circle cx="${headCenter[0]+SEG.headR-0.5}" cy="${headCenter[1]+1.5}" r="1.6" fill="#C98E63"/>`:''}
+    </g>
+  </svg>`;
+}
+
+const exSel = document.getElementById('ex');
+const viewSel = document.getElementById('view');
+const playBtn = document.getElementById('play');
+const fig = document.getElementById('fig');
+function currentEx(){ return exSel.value; }
+let playing = true, t = 0, last = 0;
+function loop(ts){
+  if(!last) last=ts;
+  const dt=(ts-last)/1000; last=ts;
+  if(playing){ t = (t + dt/2.5) % 1; }
+  const kf = KF[currentEx()];
+  const pose = kf ? sampleAt(kf.frames, t) : stand;
+  fig.innerHTML = render(pose, viewSel.value);
+  requestAnimationFrame(loop);
+}
+exSel.addEventListener('change', ()=>{ t=0; });
+viewSel.addEventListener('change', ()=>{ /* re-render handled in loop */ });
+playBtn.addEventListener('click', ()=>{ playing=!playing; playBtn.textContent = playing?'⏸ 暂停':'▶ 播放'; });
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
