@@ -114,17 +114,6 @@ export const EXERCISE_KEYFRAMES: Record<string, ExerciseKeyframes> = {
     ],
     prop: 'none',
   },
-  // 低冲击有氧（侧视，走路）
-  'low-impact-cardio': {
-    view: 'side',
-    frames: [
-      p({ kneeL: 10, kneeR: 25, hipFlexL: 5, hipFlexR: 20, elbowL: 30, elbowR: 40, footLift: 0 }),
-      p({ kneeL: 40, kneeR: 10, hipFlexL: 25, hipFlexR: 5, elbowL: 50, elbowR: 20, footLift: 0.6 }),
-      p({ kneeL: 10, kneeR: 25, hipFlexL: 5, hipFlexR: 20, elbowL: 30, elbowR: 40, footLift: 0 }),
-      p({ kneeR: 40, kneeL: 10, hipFlexR: 25, hipFlexL: 5, elbowR: 50, elbowL: 20, footLift: 0.6 }),
-    ],
-    prop: 'none',
-  },
   // 坐姿踝泵（侧视，坐姿）
   'seated-ankle-pumps': {
     view: 'side',
@@ -199,11 +188,14 @@ export const EXERCISE_KEYFRAMES: Record<string, ExerciseKeyframes> = {
 
 // 收尾"轻松踏步"复用热身"原地轻松踏步"的动画
 EXERCISE_KEYFRAMES['easy-march-cool'] = EXERCISE_KEYFRAMES['easy-march']
+// 低冲击有氧详情页用原地踏步作为动作演示，保持正面/侧面节奏一致。
+EXERCISE_KEYFRAMES['low-impact-cardio'] = EXERCISE_KEYFRAMES['easy-march']
 
 /** 双视图同步演示的动作清单（详情页同时渲染正面+侧面，共用同一时间轴） */
 export const DUAL_VIEW_EXERCISES: ReadonlySet<string> = new Set([
   'easy-march',
   'easy-march-cool',
+  'low-impact-cardio',
 ])
 
 // 未定义关键帧的动作 id 集合（用于检测 TODO）
