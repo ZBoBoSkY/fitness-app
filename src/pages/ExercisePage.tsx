@@ -49,7 +49,7 @@ export default function ExercisePage() {
   const items = day?.sections.flatMap((s) => s.items) ?? []
   const idx = items.findIndex((i) => i.id === exerciseId)
   const item = items[idx]
-  const hasVideo = !!item.video
+  const hasVideo = !!item?.video
   // 双视图同步演示（试点：原地踏步类），后续动作加入 DUAL_VIEW_EXERCISES 即可启用
   const isDual = !hasVideo && DUAL_VIEW_EXERCISES.has(exerciseId ?? '')
 
@@ -145,7 +145,7 @@ export default function ExercisePage() {
           <button className="done-pill" onClick={() => navigate(-1)}>
             完成
           </button>
-          <div className="anim-meta">
+          <div className={`anim-meta${isDual ? ' anim-meta-top' : ''}`}>
             {hasVideo ? (
               <span>真人演示</span>
             ) : isDual ? (

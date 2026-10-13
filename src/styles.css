@@ -598,6 +598,11 @@ body {
   padding: 3px 8px;
   border-radius: 8px;
 }
+/* 双视图时信息条移到左上，避免遮挡视图标签 */
+.anim-meta-top {
+  top: 8px;
+  bottom: auto;
+}
 .anim-controls {
   display: flex;
   gap: 12px;
