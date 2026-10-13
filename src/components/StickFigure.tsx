@@ -1,7 +1,11 @@
 // SVG 人体渲染：关节角度驱动骨骼（正面/侧面）——极简线条骨架
 // 2026-10-13 重写：去掉伪体积胶囊/渐变/肤色，改为一笔线条 + 关节点 + 站立虚影。
+// 几何约定（修正后）：
+//   侧视：人物面向 +x；髋屈曲为正=大腿前抬（90°-hipFlex）；膝屈曲为正=小腿向后下垂（thigh+knee）；
+//         torsoLean 为整段躯干绕髋前倾。
+//   正视：髋屈曲表现为大腿透视缩短（×cos），抬起腿小幅外展，支撑腿保持垂直不滑动。
 // 作为「无真人视频」动作的回退示意；目标肌群由 MuscleMap 负责高亮。
-// 骨骼几何与关键帧接口保持不变。
+// 骨骼段长与关键帧接口保持不变。
 
 export interface Pose {
   // 关节角度（度）
@@ -17,8 +21,10 @@ export interface Pose {
   // 躯干/整体旋转（侧视用）
   torsoLean: number
   // 位置偏移（用于踏步等）
-  footLift: number // 0..1，抬脚比例
+  footLift: number // -1..1，正值=左腿抬起，负值=右腿抬起
   armSwing: number // -1..1
+  /** 躯干竖直起伏 0..1（约 1.5px），用于踏步等轻微重心上提 */
+  bob?: number
 }
 
 export interface BodyPartHighlight {
@@ -59,39 +65,60 @@ function polar(cx: number, cy: number, len: number, angleDeg: number): [number, 
 
 export default function StickFigure({ pose, view, children, className }: Props) {
   const isSide = view === 'side'
-  const hipX = 100
-  const hipY = isSide ? 108 : 103
-  const headY = hipY - SEG.torsoLen - SEG.neckLen - SEG.headR
-  const torsoAngle = isSide ? pose.torsoLean : 0
-  const neckBase: [number, number] = [hipX, hipY - SEG.torsoLen]
-  const headCenter: [number, number] = [
-    hipX + (isSide ? Math.sin((torsoAngle * Math.PI) / 180) * (SEG.neckLen + SEG.headR) : 0),
-    headY,
-  ]
-  const shoulderY = neckBase[1]
-  const shoulderX = neckBase[0]
 
-  const makeArm = (shoulderAng: number, elbowAng: number) => {
-    const dir = -90 + shoulderAng
-    const [ex, ey] = polar(shoulderX, shoulderY, SEG.upperArm, dir)
-    const [hx, hy] = polar(ex, ey, SEG.forearm, dir + elbowAng - 90)
+  // 躯干起伏：抬腿时重心轻微上提（约 1.5px），避免大幅弹跳
+  const hipX = 100
+  const hipY = (isSide ? 108 : 103) - (pose.bob ?? 0) * 1.5
+
+  // 躯干绕髋前倾（侧视）：整段躯干+头+肩一起转，而不是只平移头部
+  const leanRad = (isSide ? pose.torsoLean : 0) * (Math.PI / 180)
+  const leanDx = Math.sin(leanRad)
+  const leanDy = Math.cos(leanRad)
+  const neckBase: [number, number] = [
+    hipX + leanDx * SEG.torsoLen,
+    hipY - leanDy * SEG.torsoLen,
+  ]
+  const headCenter: [number, number] = [
+    hipX + leanDx * (SEG.torsoLen + SEG.neckLen + SEG.headR),
+    hipY - leanDy * (SEG.torsoLen + SEG.neckLen + SEG.headR),
+  ]
+  const shoulderX = neckBase[0]
+  const shoulderY = neckBase[1]
+
+  // 手臂：静止时自然下垂（90°）。侧视前抬为正（0=下垂，90=前平举）；
+  // 正视前抬在画面外，用小幅外展近似；肘屈曲带动前臂上折
+  const makeArm = (shoulderAng: number, elbowAng: number, mirror: 1 | -1) => {
+    const upper = isSide ? 90 - shoulderAng : 90 + shoulderAng * 0.3 * mirror
+    const [ex, ey] = polar(shoulderX, shoulderY, SEG.upperArm, upper)
+    const fore = isSide ? upper - elbowAng : upper - elbowAng * 0.55 * mirror
+    const [hx, hy] = polar(ex, ey, SEG.forearm, fore)
     return { elbow: [ex, ey] as [number, number], hand: [hx, hy] as [number, number] }
   }
-  const armL = makeArm(pose.shoulderL, pose.elbowL)
-  const armR = makeArm(pose.shoulderR, pose.elbowR)
 
-  const makeLeg = (hipFlex: number, knee: number, lift: number) => {
-    let thighAngle: number
-    if (isSide) thighAngle = 90 + hipFlex
-    else thighAngle = 90
-    const thighAng = thighAngle + (isSide ? 0 : lift * 8 * 0.3)
-    const [kx, ky] = polar(hipX, hipY, SEG.thigh, thighAng)
-    const shinAngle = thighAng - knee
+  const armL = makeArm(pose.shoulderL, pose.elbowL, 1)
+  const armR = makeArm(pose.shoulderR, pose.elbowR, -1)
+
+  // 腿：侧视前抬为正（90°-hipFlex），小腿顺膝屈曲向后下垂（thigh+knee）；
+  // 正视髋屈曲使大腿透视缩短，仅抬起腿小幅外展，支撑腿垂直（脚不滑动）
+  const makeLeg = (hipFlex: number, knee: number, lift: number, mirror: 1 | -1) => {
+    if (isSide) {
+      const thighAngle = 90 - hipFlex
+      const [kx, ky] = polar(hipX, hipY, SEG.thigh, thighAngle)
+      const shinAngle = thighAngle + knee
+      const [ax, ay] = polar(kx, ky, SEG.shin, shinAngle)
+      return { knee: [kx, ky] as [number, number], ankle: [ax, ay] as [number, number] }
+    }
+    const tilt = lift > 0 ? lift * 9 : 0
+    const thighAngle = 90 + tilt * mirror
+    const effThigh = SEG.thigh * Math.max(Math.cos((hipFlex * Math.PI) / 180), 0.25)
+    const [kx, ky] = polar(hipX, hipY, effThigh, thighAngle)
+    const shinAngle = 90 + (thighAngle - 90) * 0.2 - knee * 0.12
     const [ax, ay] = polar(kx, ky, SEG.shin, shinAngle)
     return { knee: [kx, ky] as [number, number], ankle: [ax, ay] as [number, number] }
   }
-  const legL = makeLeg(pose.hipFlexL, pose.kneeL, pose.footLift)
-  const legR = makeLeg(pose.hipFlexR, pose.kneeR, -pose.footLift)
+
+  const legL = makeLeg(pose.hipFlexL, pose.kneeL, Math.max(pose.footLift, 0), 1)
+  const legR = makeLeg(pose.hipFlexR, pose.kneeR, Math.max(-pose.footLift, 0), -1)
 
   // 站立参考虚影（展示动作范围，固定姿态）
   const ghost = {

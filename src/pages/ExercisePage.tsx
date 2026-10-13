@@ -4,6 +4,8 @@ import { useApp } from '../state/store'
 import { toDateKey } from '../lib/plan'
 import * as db from '../lib/db'
 import ExerciseAnimation from '../components/ExerciseAnimation'
+import DualAnimation from '../components/DualAnimation'
+import { DUAL_VIEW_EXERCISES } from '../animations/keyframes'
 import MuscleMap from '../components/MuscleMap'
 
 /** 解剖名 → 中文部位名 */
@@ -38,6 +40,8 @@ export default function ExercisePage() {
   const { plan, selectedDate, records, updateRecord, startTickTimer } = useApp()
   const [playing, setPlaying] = useState(true)
   const [viewOverride, setViewOverride] = useState<'front' | 'side' | null>(null)
+  const [speed, setSpeed] = useState(1)
+  const [resetCount, setResetCount] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [videoPlaying, setVideoPlaying] = useState(true)
 
@@ -46,6 +50,8 @@ export default function ExercisePage() {
   const idx = items.findIndex((i) => i.id === exerciseId)
   const item = items[idx]
   const hasVideo = !!item.video
+  // 双视图同步演示（试点：原地踏步类），后续动作加入 DUAL_VIEW_EXERCISES 即可启用
+  const isDual = !hasVideo && DUAL_VIEW_EXERCISES.has(exerciseId ?? '')
 
   const dateKey = toDateKey(selectedDate)
   const key = db.makeRecordKey(dateKey, dayIndex, exerciseId ?? '')
@@ -112,7 +118,7 @@ export default function ExercisePage() {
       {/* 顶部：动画 / 真人演示视频 */}
       <div className="card anim-card">
         <div className="anim-stage">
-          <div className="detail-anim">
+          <div className={isDual ? 'detail-anim dual-wrap' : 'detail-anim'}>
             {hasVideo ? (
               <video
                 ref={videoRef}
@@ -125,6 +131,13 @@ export default function ExercisePage() {
                 onPlay={() => setVideoPlaying(true)}
                 onPause={() => setVideoPlaying(false)}
               />
+            ) : isDual ? (
+              <DualAnimation
+                exerciseId={item.id}
+                playing={playing}
+                speed={speed}
+                resetKey={resetCount}
+              />
             ) : (
               <ExerciseAnimation exerciseId={item.id} view={view} highlight={[]} playing={playing} />
             )}
@@ -135,6 +148,11 @@ export default function ExercisePage() {
           <div className="anim-meta">
             {hasVideo ? (
               <span>真人演示</span>
+            ) : isDual ? (
+              <>
+                <span>正面 + 侧面 · 同步</span>
+                {partsLabel && <span> · {partsLabel}</span>}
+              </>
             ) : (
               <>
                 <span>{view === 'side' ? '侧面示意' : '正面示意'}</span>
@@ -147,7 +165,7 @@ export default function ExercisePage() {
           </div>
         </div>
         <div className="anim-controls">
-          {!hasVideo && (
+          {!hasVideo && !isDual && (
             <button
               onClick={() => setViewOverride(view === 'side' ? 'front' : 'side')}
               aria-label="切换视角"
@@ -197,6 +215,8 @@ export default function ExercisePage() {
               if (hasVideo && videoRef.current) {
                 videoRef.current.currentTime = 0
                 videoRef.current.play()
+              } else if (isDual) {
+                setResetCount((c) => c + 1)
               } else {
                 setPlaying(false)
                 // 重播：短暂置 true 触发重新开始
@@ -211,6 +231,15 @@ export default function ExercisePage() {
               <path d="M3 4v5h5" />
             </svg>
           </button>
+          {isDual && (
+            <button
+              onClick={() => setSpeed((s) => (s === 1 ? 1.5 : s === 1.5 ? 0.5 : 1))}
+              aria-label="播放速度"
+              title="播放速度"
+            >
+              <span style={{ fontSize: 13, fontWeight: 700 }}>{speed === 1 ? '1x' : speed === 1.5 ? '1.5x' : '0.5x'}</span>
+            </button>
+          )}
         </div>
       </div>
 

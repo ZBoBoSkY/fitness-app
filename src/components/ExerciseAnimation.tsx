@@ -1,5 +1,7 @@
 // 动作动画：关键帧插值循环播放 + 道具绘制
-import { useEffect, useRef, useState } from 'react'
+// 2026-10-13：相邻关键帧改用 smoothstep 缓动（消除线性插值的生硬起止）；
+// 时钟抽取为 useAnimationClock 供双视图复用；新增速度参数。
+import { useEffect, useState } from 'react'
 import StickFigure, { type Pose, type BodyPartHighlight, HIGHLIGHT_COLOR } from './StickFigure'
 import { EXERCISE_KEYFRAMES, hasKeyframes, defaultKeyframes, type ExerciseKeyframes } from '../animations/keyframes'
 
@@ -10,6 +12,8 @@ interface Props {
   playing: boolean
   /** 一次循环时长（秒） */
   cycleSec?: number
+  /** 播放速度倍率（1=常速） */
+  speed?: number
 }
 
 function lerp(a: number, b: number, t: number): number {
@@ -20,20 +24,58 @@ function lerpPose(a: Pose, b: Pose, t: number): Pose {
   const keys = Object.keys(a) as (keyof Pose)[]
   const out = { ...a }
   for (const k of keys) {
-    out[k] = lerp(a[k], b[k], t)
+    out[k] = lerp(a[k] ?? 0, b[k] ?? 0, t)
   }
   return out
 }
 
-/** 在关键帧序列中采样（首尾循环） */
-function sampleAt(frames: Pose[], t01: number): Pose {
+/** smoothstep 缓动：段首段末减速，动作起止更自然 */
+function easeInOut(t: number): number {
+  return t * t * (3 - 2 * t)
+}
+
+/** 在关键帧序列中采样（首尾循环，段内缓动） */
+export function samplePose(frames: Pose[], t01: number): Pose {
   const n = frames.length
   if (n === 1) return frames[0]
   const seg = t01 * n
   const i = Math.floor(seg) % n
   const j = (i + 1) % n
-  const local = seg - Math.floor(seg)
+  const local = easeInOut(seg - Math.floor(seg))
   return lerpPose(frames[i], frames[j], local)
+}
+
+/** 动画时钟：rAF 驱动的 0..1 循环进度。playing/cycleSec 变化时干净重启，不跳帧；resetKey 变化时回到起点 */
+export function useAnimationClock(playing: boolean, cycleSec: number, resetKey = 0): number {
+  const [t, setT] = useState(0)
+  useEffect(() => {
+    setT(0)
+  }, [resetKey])
+  useEffect(() => {
+    if (!playing) return
+    let raf = 0
+    let last = 0
+    const loop = (ts: number) => {
+      if (!last) last = ts
+      const dt = (ts - last) / 1000
+      last = ts
+      setT((prev) => (prev + dt / cycleSec) % 1)
+      raf = requestAnimationFrame(loop)
+    }
+    raf = requestAnimationFrame(loop)
+    return () => cancelAnimationFrame(raf)
+  }, [playing, cycleSec])
+  return t
+}
+
+/** 动作对应的道具 SVG 节点 */
+export function getPropNode(kf: ExerciseKeyframes, pose: Pose): React.ReactNode {
+  return renderProp(kf, pose)
+}
+
+/** 取动作关键帧（无定义时回退默认呼吸动画） */
+export function getKeyframes(exerciseId: string): ExerciseKeyframes {
+  return hasKeyframes(exerciseId) ? EXERCISE_KEYFRAMES[exerciseId] : defaultKeyframes('front')
 }
 
 function toHighlight(parts: string[]): BodyPartHighlight {
@@ -96,31 +138,11 @@ function renderProp(kf: ExerciseKeyframes, pose: Pose): React.ReactNode {
   }
 }
 
-export default function ExerciseAnimation({ exerciseId, view, highlight, playing, cycleSec = 2.5 }: Props) {
-  const kf: ExerciseKeyframes = hasKeyframes(exerciseId) ? EXERCISE_KEYFRAMES[exerciseId] : defaultKeyframes(view)
-  const [t, setT] = useState(0)
-  const rafRef = useRef<number>()
-  const lastRef = useRef<number>(0)
+export default function ExerciseAnimation({ exerciseId, view, highlight, playing, cycleSec = 2.5, speed = 1 }: Props) {
+  const kf = getKeyframes(exerciseId)
+  const t = useAnimationClock(playing, cycleSec / Math.max(speed, 0.1))
 
-  useEffect(() => {
-    if (!playing) {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current)
-      return
-    }
-    let frame = 0
-    const loop = (ts: number) => {
-      if (!lastRef.current) lastRef.current = ts
-      const dt = (ts - lastRef.current) / 1000
-      lastRef.current = ts
-      setT((prev) => (prev + dt / cycleSec) % 1)
-      frame = requestAnimationFrame(loop)
-    }
-    frame = requestAnimationFrame(loop)
-    rafRef.current = frame
-    return () => cancelAnimationFrame(frame)
-  }, [playing, cycleSec])
-
-  const pose = sampleAt(kf.frames, t)
+  const pose = samplePose(kf.frames, t)
   const hl = toHighlight(highlight)
 
   return (

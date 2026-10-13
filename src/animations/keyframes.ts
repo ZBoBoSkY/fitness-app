@@ -14,7 +14,7 @@ export interface ExerciseKeyframes {
 const stand: Pose = {
   hip: 0, kneeL: 5, kneeR: 5, shoulderL: 0, shoulderR: 0,
   elbowL: 0, elbowR: 0, hipFlexL: 0, hipFlexR: 0,
-  torsoLean: 0, footLift: 0, armSwing: 0,
+  torsoLean: 0, footLift: 0, armSwing: 0, bob: 0,
 }
 
 function p(partial: Partial<Pose>): Pose {
@@ -22,14 +22,24 @@ function p(partial: Partial<Pose>): Pose {
 }
 
 export const EXERCISE_KEYFRAMES: Record<string, ExerciseKeyframes> = {
-  // 原地轻松踏步 / 轻松踏步（正面）
+  // 原地轻松踏步（正面+侧面同步双视图）
+  // 6 帧步态：双脚支撑 → 左腿峰值 → 左腿回落 → 双脚支撑 → 右腿峰值 → 右腿回落
+  // footLift: 1=左腿抬起，-1=右腿抬起；hipFlex 仅作用于侧视（抬腿前摆）
   'easy-march': {
     view: 'front',
     frames: [
-      p({ kneeL: 8, kneeR: 8, elbowL: 12, elbowR: 12, footLift: 0 }),
-      p({ kneeL: 55, kneeR: 8, hipFlexL: 35, elbowL: 40, elbowR: 12, footLift: 0.7 }),
-      p({ kneeL: 8, kneeR: 8, elbowL: 12, elbowR: 12, footLift: 0 }),
-      p({ kneeR: 55, kneeL: 8, hipFlexR: 35, elbowR: 40, elbowL: 12, footLift: 0.7 }),
+      // 双脚支撑（短暂站稳，完成重心交接）
+      p({ kneeL: 8, kneeR: 8, elbowL: 12, elbowR: 12, footLift: 0, bob: 0 }),
+      // 左腿抬起峰值：膝屈 75、大腿外展，右臂前摆、左臂后摆，躯干轻微上提
+      p({ kneeL: 75, kneeR: 8, hipFlexL: 45, shoulderR: 25, shoulderL: -12, elbowL: 25, elbowR: 45, footLift: 1, bob: 1 }),
+      // 左腿回落
+      p({ kneeL: 22, kneeR: 8, hipFlexL: 12, shoulderR: 10, shoulderL: -4, elbowL: 15, elbowR: 20, footLift: 0.3, bob: 0.2 }),
+      // 双脚支撑
+      p({ kneeL: 8, kneeR: 8, elbowL: 12, elbowR: 12, footLift: 0, bob: 0 }),
+      // 右腿抬起峰值（镜像）
+      p({ kneeR: 75, kneeL: 8, hipFlexR: 45, shoulderL: 25, shoulderR: -12, elbowR: 25, elbowL: 45, footLift: -1, bob: 1 }),
+      // 右腿回落
+      p({ kneeR: 22, kneeL: 8, hipFlexR: 12, shoulderL: 10, shoulderR: -4, elbowR: 15, elbowL: 20, footLift: -0.3, bob: 0.2 }),
     ],
     prop: 'none',
   },
@@ -189,6 +199,12 @@ export const EXERCISE_KEYFRAMES: Record<string, ExerciseKeyframes> = {
 
 // 收尾"轻松踏步"复用热身"原地轻松踏步"的动画
 EXERCISE_KEYFRAMES['easy-march-cool'] = EXERCISE_KEYFRAMES['easy-march']
+
+/** 双视图同步演示的动作清单（详情页同时渲染正面+侧面，共用同一时间轴） */
+export const DUAL_VIEW_EXERCISES: ReadonlySet<string> = new Set([
+  'easy-march',
+  'easy-march-cool',
+])
 
 // 未定义关键帧的动作 id 集合（用于检测 TODO）
 export function hasKeyframes(id: string): boolean {

@@ -549,6 +549,31 @@ body {
   display: block;
   background: #0E0F11;
 }
+/* 双视图同步演示（正面+侧面） */
+.dual-wrap {
+  max-width: 440px;
+}
+.dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
+.dual-cell svg {
+  width: 100%;
+  height: auto;
+}
+.dual-label {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+@media (max-width: 480px) {
+  .dual-wrap {
+    max-width: 100%;
+  }
+}
 .done-pill {
   position: absolute;
   top: 8px;
